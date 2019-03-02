@@ -1,8 +1,3 @@
-<%-- 
-    Document   : Nuevo_prod
-    Created on : 1/10/2018, 11:00:46 PM
-    Author     : Marii y Erick
---%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -23,7 +18,7 @@
         
         <header class="sticky-top">
             
-            <nav class="navbar navbar-expand-lg navbar-light barra">
+          <nav class="navbar navbar-expand-lg navbar-light barra">
                 <a href="#" class="navbar-brand text-white">Compras</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#compras_navbar" aria-controls="compras_navbar" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -49,7 +44,7 @@
                         </li>                                              
                     </ul>
                 </div> 
-            </nav>          
+            </nav>           
 
         </header>
         
@@ -83,6 +78,9 @@
                         </form>
                         <br>
                     </div>   
+                    
+                    
+                    
                     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
                         
                         
@@ -118,7 +116,12 @@
                            <input type="submit" value="Nuevo" style="background-color:#3366FF" name="filtro" class="btn btn-primary">
                           
                           
-                               </div>
+                               </div> </form>
+                               
+                               
+                               
+                               
+                               
                           <div class="col-xs-3"> 
                               <center><input type="text" name="rfcprov" placeholder="Producto" id="codprod" class="form-control" required="complete el campo"></center>
                                <br>
