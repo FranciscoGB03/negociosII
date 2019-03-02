@@ -10,23 +10,22 @@ package com.sap.inventario.clases;
  * @author claudia
  */
 public class Producto {
-    String clave;
     String nombre;
-    double costounitario;
-    String unidad;
-    String tipo;
+    double precio_compra;
+    String precio_venta;
     int cantidad;
     double iva;
-    double costototal;
-    String fecha;
     double montototal;
+    String tipo;
 
-    public String getClave() {
-        return clave;
-    }
-
-    public void setClave(String clave) {
-        this.clave = clave;
+    public Producto(String nombre, double precio_compra, String precio_venta, int cantidad, double iva, double montototal, String tipo) {
+        this.nombre = nombre;
+        this.precio_compra = precio_compra;
+        this.precio_venta = precio_venta;
+        this.cantidad = cantidad;
+        this.iva = iva;
+        this.montototal = montototal;
+        this.tipo = tipo;
     }
 
     public String getNombre() {
@@ -37,28 +36,20 @@ public class Producto {
         this.nombre = nombre;
     }
 
-    public double getCostounitario() {
-        return costounitario;
+    public double getPrecio_compra() {
+        return precio_compra;
     }
 
-    public void setCostounitario(double costounitario) {
-        this.costounitario = costounitario;
+    public void setPrecio_compra(double precio_compra) {
+        this.precio_compra = precio_compra;
     }
 
-    public String getUnidad() {
-        return unidad;
+    public String getPrecio_venta() {
+        return precio_venta;
     }
 
-    public void setUnidad(String unidad) {
-        this.unidad = unidad;
-    }
-
-    public String getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public void setPrecio_venta(String precio_venta) {
+        this.precio_venta = precio_venta;
     }
 
     public int getCantidad() {
@@ -77,23 +68,6 @@ public class Producto {
         this.iva = iva;
     }
 
-    public double getCostototal() {
-        return costototal;
-    }
-
-    public void setCostototal(double costototal) {
-        this.costototal = costototal;
-    }
-
-    public String getFecha() {
-        return fecha;
-    }
-
-    public void setFecha(String fecha) {
-        this.fecha = fecha;
-    }
-
-
     public double getMontototal() {
         return montototal;
     }
@@ -101,5 +75,13 @@ public class Producto {
     public void setMontototal(double montototal) {
         this.montototal = montototal;
     }
-    
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
 }

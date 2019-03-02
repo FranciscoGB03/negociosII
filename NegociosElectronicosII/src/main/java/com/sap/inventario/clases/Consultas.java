@@ -27,22 +27,19 @@ public class Consultas {
         Properties connProp = new Properties();
         connProp.put("user", "postgres");
         connProp.put("password", "root");
-        conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/SAP", connProp);
+        conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Abarrotes", connProp);
         Statement stmt;        
         stmt = conn.createStatement();
         ResultSet rs = stmt.executeQuery("select * from producto");
         while (rs.next()) {
             Producto p=new Producto();
-            p.setClave(rs.getString("clave"));
             p.setNombre(rs.getString("nombre"));
-            p.setTipo(rs.getString("tipo"));
-            p.setUnidad(rs.getString("unidad"));
+            p.setTipo(rs.getString("precio_compra"));
+            p.setUnidad(rs.getString("precio_venta"));
             p.setCantidad(rs.getInt("cantidad"));
-            p.setCostounitario(rs.getDouble("costounitario"));
-            p.setCostototal(rs.getDouble("costo"));
             p.setIva(rs.getDouble("Iva"));
-            p.setFecha(rs.getString("fecha"));
             p.setMontototal(rs.getDouble("monto_total"));
+            p.setFecha(rs.getString("tipo"));
             l.add(p);
         }
         conn.close();
