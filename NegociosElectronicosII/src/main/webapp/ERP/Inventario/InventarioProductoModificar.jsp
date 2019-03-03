@@ -63,7 +63,7 @@
                 <p class="card-text">Ingrese el monto total del producto</p>
                 <input type="number" id="monto" name="monto" class="form-control form-control-sm" required="required"/>
                 <p class="card-text">Ingrese el tipo del producto:</p>
-                <input type="text" id="tipo" name="tipo" class="form-control form-control-sm" required="required"/>
+                <input type="number" id="tipo" name="tipo" class="form-control form-control-sm" required="required"/>
             
                 <input id="boamerma" type="submit" value="Guardar" class="btn btn-success"/>
                         </form>

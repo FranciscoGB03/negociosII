@@ -65,14 +65,14 @@
                                                                                   
                             <div class="form-group">
                               <label for="iva">Ingrese el iva del producto</label>
-                            <input type="number" id="cantidad" name="iva" class="form-control " required="required" />                                   
+                            <input type="number" id="iva" name="iva" class="form-control " required="required" />                                   
                             </div>    
                                  <div class="form-group">
                             <label for="monto">Ingrese el monto total producto:</label>
-                         <input type="number" id="costo" name="monto" class="form-control " required="required" />  
+                         <input type="number" id="monto" name="monto" class="form-control " required="required" />  
                 
                           <label for="tipo">Ingrese el tipo del producto:</label>
-                            <input type="text" id="costov" name="tipo" class="form-control " required="required" /> 
+                            <input type="number" id="tipo" name="tipo" class="form-control " required="required" /> 
                             </div> 
                             <div class="form-group">
                                 <input type="reset" value="Cancelar" class="btn btn-default"/>                                                        
