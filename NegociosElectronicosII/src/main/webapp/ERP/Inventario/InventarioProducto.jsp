@@ -95,32 +95,28 @@
     <table class="table-striped table table-bordered table-hover">
       <tr>
         <th>
-          clave Producto
-        </th>
-      
-        <th>
           Nombre Producto
         </th>
       
         <th>
-          tipo
+          Precio Compra
         </th>
         <th>
-          Unidad
+          Precio de venta
         </th>
         <th>
           Cantidad
         </th>
       
         <th>
-          Costo unitario
+          iva
         </th>
         <th>
-          Costo de venta
+          Monto Total
         </th>
         
         <th>
-          iva 
+          Tipo 
         </th>
       </tr>
       <%
@@ -128,14 +124,13 @@
                         for (int i=0;i<lista.size();i++)
                         {
                            out.println("<tr>");                               
-                           out.println("<td>"+lista.get(i).getClave()+"</td>");
                            out.println("<td>"+lista.get(i).getNombre()+"</td>");
-                           out.println("<td>"+lista.get(i).getTipo()+"</td>");
-                           out.println("<td>"+lista.get(i).getUnidad()+"</td>");
+                           out.println("<td>"+lista.get(i).getPrecio_compra()+"</td>");
+                           out.println("<td>"+lista.get(i).getPrecio_venta()+"</td>");
                            out.println("<td>"+lista.get(i).getCantidad()+"</td>");
-                           out.println("<td>"+lista.get(i).getCostounitario()+"</td>");
-                           out.println("<td>"+lista.get(i).getCostototal()+"</td>");
                            out.println("<td>"+lista.get(i).getIva()+"</td>");
+                           out.println("<td>"+lista.get(i).getMontototal()+"</td>");
+                           out.println("<td>"+lista.get(i).getTipo()+"</td>");
                            out.println("</tr>");
                         }
                     %>

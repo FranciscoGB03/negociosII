@@ -12,13 +12,13 @@ package com.sap.inventario.clases;
 public class Producto {
     String nombre;
     double precio_compra;
-    String precio_venta;
+    double precio_venta;
     int cantidad;
     double iva;
     double montototal;
-    String tipo;
+    int tipo;
 
-    public Producto(String nombre, double precio_compra, String precio_venta, int cantidad, double iva, double montototal, String tipo) {
+    public Producto(String nombre, double precio_compra, double precio_venta, int cantidad, double iva, double montototal, int tipo) {
         this.nombre = nombre;
         this.precio_compra = precio_compra;
         this.precio_venta = precio_venta;
@@ -26,6 +26,10 @@ public class Producto {
         this.iva = iva;
         this.montototal = montototal;
         this.tipo = tipo;
+    }
+
+    Producto() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public String getNombre() {
@@ -44,11 +48,11 @@ public class Producto {
         this.precio_compra = precio_compra;
     }
 
-    public String getPrecio_venta() {
+    public double getPrecio_venta() {
         return precio_venta;
     }
 
-    public void setPrecio_venta(String precio_venta) {
+    public void setPrecio_venta(Double precio_venta) {
         this.precio_venta = precio_venta;
     }
 
@@ -76,11 +80,11 @@ public class Producto {
         this.montototal = montototal;
     }
 
-    public String getTipo() {
+    public int getTipo() {
         return tipo;
     }
 
-    public void setTipo(String tipo) {
+    public void setTipo(int tipo) {
         this.tipo = tipo;
     }
 

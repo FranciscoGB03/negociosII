@@ -32,21 +32,6 @@
                             <a class="nav-link text-white" href="InventarioProductoAgregar.jsp">Agregar&nbsp;Producto</a>
                             <a class="nav-link text-white" href="InventarioProductoModificar.jsp">Modificar&nbsp;Producto</a>                                  
                         </div>                  
-                    <li class="nav-item">
-                        <a href="InventarioEntradas.jsp" class="nav-link text-white">Inventario&nbsp;Entradas</a>
-                    </li>    
-                    <li class="nav-item">
-                        <a href="InventarioSalida.jsp" class="nav-link text-white">Inventario&nbsp;Salidas</a>
-                    </li> 
-                    <li class="nav-item dropdown">
-                        <a href="#InventarioMerma.jsp" class="nav-link dropdown-toggle text-white" id="merma" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Merma</a>
-                        <div class="dropdown-menu bg-primary" aria-labelledby="inventario">
-                            <a class="nav-link text-white" href="InventarioMerma.jsp">Merma</a>
-                            <a class="nav-link text-white" href="InventarioMermaAgregar.jsp">Agregar&nbsp;Merma</a>
-                            <a class="nav-link text-white" href="InventarioMermaModificar.jsp">Modificar&nbsp;Merma</a>                                  
-                        </div>
-                    </li>                            
-                </ul>   
                <form class="form-inline my-2 my-lg-0" action="../index.jsp">                
                     <button class="btn-outline-primary barra text-white my-2 my-sm-0" id="cerrarSesion" type="submit">Cerrar Sesi&oacute;n</button>
                 </form>
@@ -64,34 +49,22 @@
                         <form  action="../ModificarProducto" method="post">
                 <h3 class="card-title" >Modificar Producto </h3><br><br>
                 <!--INICIO CUESTIONARIO-->
-                <label class="card-text">Ingrese clave de producto:</label><br>
-                <input type="text" id="bclave" name="bclave" class="form-control form-control-sm" />
+                <label class="card-text">Ingrese nombre de producto:</label><br>
+                <input type="text" id="nombre" name="nombre" class="form-control form-control-sm" />
                 <input id="buscarclave" type="submit" value="Buscar" class="btn btn-success"/><br><br>
-                <label class="card-text">Ingrese clave de producto:</label><br>
-                <input type="text" id="clave" name="clave" class="form-control form-control-sm" required="required" />
-                <label class="card-text">Ingrese el nombre:</label><br>
-                <input type="text" id="nombre" name="nombre" class="form-control form-control-sm" required="required" />
-                <p class="card-text">Ingrese tipo de producto</p>
-                <input type="text" id="tipo" name="tipo" class="form-control form-control-sm" />
-                <label class="card-text">Ingrese la unidad:</label><br>
-                <input type="text" id="unidad" name="unidad" class="form-control form-control-sm" />
-                <p class="card-text">Ingrese la cantidad</p>
-                <input type="number" id="cantidad" name="cantidad" class="form-control form-control-sm" required="required"/>
-                <p class="card-text">Ingrese el costo unitario:</p>
-                <input type="number" id="costounitario" name="costounitario" class="form-control form-control-sm" required="required"/>
-                <p class="card-text">Ingrese el iva</p>
-                <input type="number" id="iva" name="iva" step="0.01" class="form-control form-control-sm" />
-                <p class="card-text">Ingrese el costo venta:</p>
-                <input type="number" id="costo" name="costo" class="form-control form-control-sm" required="required"/>
-                <p class="card-text">Ingrese la fecha</p>
-                <input type="date" id="fecha" name="fecha" class="form-control form-control-sm" />
-                <p class="card-text">Ingrese la operacion</p>
-                <select id="operacion" name="operacion" class="form-control">
-                                    <option value="x">Seleccione...</option>
-                                    <option value="existente ">Existente</option>
-                                    <option value="entrada">Entrada</option>
-                                    <option value="salida">Salida</option>
-                                </select>
+                <label class="card-text">Ingrese el precio de compra producto:</label><br>
+                <input type="number" id="precioc" name="precioc" class="form-control form-control-sm" required="required" />
+                <label class="card-text">Ingrese el precio de venta producto</label><br>
+                <input type="number" id="preciov" name="preciov" class="form-control form-control-sm" required="required" />
+                <p class="card-text">Ingrese la cantidad del producto</p>
+                <input type="number" id="cantidad" name="cantidad" class="form-control form-control-sm" />
+                <label class="card-text">Ingrese la iva del producto:</label><br>
+                <input type="number" id="iva" name="iva" class="form-control form-control-sm" />
+                <p class="card-text">Ingrese el monto total del producto</p>
+                <input type="number" id="monto" name="monto" class="form-control form-control-sm" required="required"/>
+                <p class="card-text">Ingrese el tipo del producto:</p>
+                <input type="text" id="tipo" name="tipo" class="form-control form-control-sm" required="required"/>
+            
                 <input id="boamerma" type="submit" value="Guardar" class="btn btn-success"/>
                         </form>
             </div>

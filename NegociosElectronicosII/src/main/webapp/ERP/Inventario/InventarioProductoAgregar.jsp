@@ -32,22 +32,7 @@
                             <a class="nav-link text-white" href="InventarioProducto.jsp">Producto</a>
                             <a class="nav-link text-white" href="InventarioProductoAgregar.jsp">Agregar&nbsp;Producto</a>
                             <a class="nav-link text-white" href="InventarioProductoModificar.jsp">Modificar&nbsp;Producto</a>                                  
-                        </div>                  
-                    <li class="nav-item">
-                        <a href="InventarioEntradas.jsp" class="nav-link text-white">Inventario&nbsp;Entradas</a>
-                    </li>    
-                    <li class="nav-item">
-                        <a href="InventarioSalida.jsp" class="nav-link text-white">Inventario&nbsp;Salidas</a>
-                    </li> 
-                    <li class="nav-item dropdown">
-                        <a href="#InventarioMerma.jsp" class="nav-link dropdown-toggle text-white" id="merma" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Merma</a>
-                        <div class="dropdown-menu bg-primary" aria-labelledby="inventario">
-                            <a class="nav-link text-white" href="InventarioMerma.jsp">Merma</a>
-                            <a class="nav-link text-white" href="InventarioMermaAgregar.jsp">Agregar&nbsp;Merma</a>
-                            <a class="nav-link text-white" href="InventarioMermaModificar.jsp">Modificar&nbsp;Merma</a>                                  
-                        </div>
-                    </li>                            
-                </ul>   
+                        </div>                     
                <form class="form-inline my-2 my-lg-0" action="../index.jsp">                
                     <button class="btn-outline-primary barra text-white my-2 my-sm-0" id="cerrarSesion" type="submit">Cerrar Sesi&oacute;n</button>
                 </form>
@@ -63,40 +48,32 @@
                     <div class="container">
                         <form  action="../AgregarProducto" method="post">                                                                                              
                             <div class="form-group">
-                                <label for="clave">Ingrese la clave de producto:</label><br>
-                                <input type="text" id="clave" name="clave" class="form-control" required="required" />
-                            </div>                                                        
-                            <div class="form-group">
                                 <label for="nombre">Ingrese el nombre del producto:</label><br>
-                                <input type="text" id="nombre" name="nombre" class="form-control" required="required" />    
+                                <input type="text" id="nombre" name="nombre" class="form-control" required="required" />
                             </div>                                                        
                             <div class="form-group">
-                                <label for="tipo">Ingrese tipo de producto</label>
-                                 <input type="text" id="tipo" name="tipo" class="form-control" required="required"/>                                    
+                                <label for="precioc">Ingrese el precio de compra del producto:</label><br>
+                                <input type="number" id="precioc" name="precioc" class="form-control" required="required" />    
+                            </div>                                                        
+                            <div class="form-group">
+                                <label for="preciov">Ingrese precio de venta producto</label>
+                                 <input type="number" id="preciov" name="preciov" class="form-control" required="required"/>                                    
                             </div>
                             <div class="form-group">
-                                <label for="unidad">Ingrese la unidad del producto:</label><br>
-                                 <input type="text" id="unidad" name="unidad" class="form-control" required="required"/>
+                                <label for="cantidad">Ingrese la cantidad del producto:</label><br>
+                                 <input type="number" id="cantidad" name="cantidad" class="form-control" required="required"/>
                                                                                   
                             <div class="form-group">
-                <label for="cantidad">Ingrese la cantidad del producto</label>
-                <input type="number" id="cantidad" name="cantidad" class="form-control " required="required" />                                   
+                              <label for="iva">Ingrese el iva del producto</label>
+                            <input type="number" id="cantidad" name="iva" class="form-control " required="required" />                                   
                             </div>    
                                  <div class="form-group">
-                <label for="costo">Ingrese el costo del producto:</label>
-                <input type="number" id="costo" name="costo" class="form-control " required="required" />  
+                            <label for="monto">Ingrese el monto total producto:</label>
+                         <input type="number" id="costo" name="monto" class="form-control " required="required" />  
                 
-                <label for="costo">Ingrese el costo de venta:</label>
-                <input type="number" id="costov" name="costov" class="form-control " required="required" /> 
-                            </div>  
-                                 <div class="form-group">
-                <label for="iva">Ingrese el iva del producto</label>
-                <input type="text" id="iva" name="iva" step="0.01" class="form-control" required="required" />       
-                                 </div>
-                                 <div class="form-group">
-                                      <label for="fecha">Fecha :</label>
-                             <input id="fecha" name="fecha" class="form-control " type="date" required="required"/> </div> 
-                            </div>  
+                          <label for="tipo">Ingrese el tipo del producto:</label>
+                            <input type="text" id="costov" name="tipo" class="form-control " required="required" /> 
+                            </div> 
                             <div class="form-group">
                                 <input type="reset" value="Cancelar" class="btn btn-default"/>                                                        
                                 <input type="submit" value="Agregar" class="btn btn-default"/>
@@ -106,7 +83,7 @@
                 </div>
             </div>
         </div>
-    
+    </div>
    
 </body>
 </html>
