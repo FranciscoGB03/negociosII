@@ -45,7 +45,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 colIndexes: [2],
              
                 rows: [
-                    ['ChinaSSSS - 2019'],
+                    ['China - 2019'],
                     ['Colombia - 2019'],
                     ['France - 2019'],
                     ['Italy - 2019'],
