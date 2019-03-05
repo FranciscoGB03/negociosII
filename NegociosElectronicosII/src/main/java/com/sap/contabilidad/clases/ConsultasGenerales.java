@@ -106,11 +106,11 @@ public class ConsultasGenerales {
         stmt = conn.createStatement();
         ResultSet rs = stmt.executeQuery("SELECT id, nombre FROM proveedores");
             while (rs.next()) {
-                Proveedor p=new Proveedor();
+/*                Proveedor p=new Proveedor();
                 p.setId(rs.getInt("id"));             
                 p.setNombre(rs.getString("nombre"));                
                 l.add(p);
-            }                    
+  */          }                    
         conn.close();
         return l;
     }

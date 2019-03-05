@@ -4,8 +4,8 @@
     Author     : Marifer y Erick
 --%>
 
-<%@page import="com.sap.Compras.Consultas"%>
 <%@page import="java.util.LinkedList"%>
+<%@page import="com.sap.Compras.clases.ConsultasdeCompras"%>
 <%@page import="com.sap.contabilidad.clases.Proveedor"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -129,38 +129,43 @@ window.location.href = "Productos.jsp";
                         <div class="table-responsive"><table class="table table-bordered">
                                 <thead>
                                     <tr class="active">
-                                        <th scope="col"><center>Id</center></th>
                                 <th scope="col"><center>Nombre</center></th>
-                                <th scope="col"><center>RFC</center></th>      
+                                <th scope="col"><center>Razon</center></th>      
+                                <th scope="col"><center>Rfc</center></th>
+                                <th scope="col"><center>Telefono</center></th>
+                                <th scope="col"><center>Correo</center></th>
                                 <th scope="col"><center>Direccion</center></th>
-                                <th scope="col"><center>Codigo Postal</center></th>
-                                <th scope="col"><center>Edo</center></th>
-                                <th scope="col"><center>Razon</center></th>
-                                <th scope="col"><center>Formulario</center></th>
+                                <th scope="col"><center>Ciudad</center></th>
+                                <th scope="col"><center>Estado</center></th>
+                                <th scope="col"><center>Municipio</center></th>
+                                <th scope="col"><center>Cuenta Bancaria</center></th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                     <%
-                        LinkedList<Proveedor> lista =Consultas.consultaProveedor();
+                         LinkedList<Proveedor> lista =ConsultasdeCompras.consultaProveedor();
                         for (int i=0;i<lista.size();i++)
                         {
-                           out.println("<tr>");                               
-                           out.println("<td>"+lista.get(i).getId()+"</td>");
+                           out.println("<tr>"); 
                            out.println("<td>"+lista.get(i).getNombre()+"</td>");
-                           out.println("<td>"+lista.get(i).getRfc()+"</td>");
-                           out.println("<td>"+lista.get(i).getDireccion()+"</td>");
-                           out.println("<td>"+lista.get(i).getCodpos()+"</td>");
-                           out.println("<td>"+lista.get(i).getEdo()+"</td>");
                            out.println("<td>"+lista.get(i).getRazon()+"</td>");
-                           out.println("<td><a class='nav-link' href='Formulario.jsp' >Orden de compra</td>");
-                           out.println("<td> <button onclick='Productos("+i+1+")'>productos</button></td>");
+                           out.println("<td>"+lista.get(i).getRfc()+"</td>");
+                           out.println("<td>"+lista.get(i).getTelefono()+"</td>");
+                           out.println("<td>"+lista.get(i).getCorreo()+"</td>");
+                           out.println("<td>"+lista.get(i).getDireccion()+"</td>");
+                           out.println("<td>"+lista.get(i).getCiudad()+"</td>");
+                           out.println("<td>"+lista.get(i).getEdo()+"</td>");
+                           out.println("<td>"+lista.get(i).getMunicipio()+"</td>");
+                           out.println("<td>"+lista.get(i).getCuentabanco()+"</td>");
+                          // out.println("<td><a class='nav-link' href='Formulario.jsp' >Orden de compra</td>");
+                           //out.println("<td> <button onclick='Productos("+i+1+")'>productos</button></td>");
                            out.println("</tr>");
                         }
                     %>
                                 </tbody>
                             </table></div>
                         <br>
-                       <p id="ejemplo">En este párrafo se mostrará la opción clickada por el usuario</p>
+                      
                     </div>
                 </div>
                 

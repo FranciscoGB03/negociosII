@@ -7,25 +7,37 @@ package com.sap.Compras.clases;
 
 /**
  *
- * @author claudia
+ * @author fgb
  */
 public class Proveedor {
-    int id;
+   int id;
     String nombre;
-    String ape_pat;
-    String ape_mat;
+    String razon;
     String rfc;
     String direccion;
-    String cod;
-    String municipio;
-    String estado;
-    int pais;
-    String razon;
-    int telefono;
+    String ciudad;
+    String telefono;
     String correo;
-    String cuentac;
-    String dias;
-    String limite;
+    String edo;
+    String municipio;
+    String cuentabanco;
+
+    public Proveedor(int id, String nombre, String razon, String rfc, String direccion, String ciudad, String telefono, String correo, String edo, String municipio, String cuentabanco) {
+        this.id = id;
+        this.nombre = nombre;
+        this.razon = razon;
+        this.rfc = rfc;
+        this.direccion = direccion;
+        this.ciudad = ciudad;
+        this.telefono = telefono;
+        this.correo = correo;
+        this.edo = edo;
+        this.municipio = municipio;
+        this.cuentabanco = cuentabanco;
+    }
+
+    public Proveedor() {
+    }
 
     public int getId() {
         return id;
@@ -43,20 +55,12 @@ public class Proveedor {
         this.nombre = nombre;
     }
 
-    public String getApe_pat() {
-        return ape_pat;
+    public String getRazon() {
+        return razon;
     }
 
-    public void setApe_pat(String ape_pat) {
-        this.ape_pat = ape_pat;
-    }
-
-    public String getApe_mat() {
-        return ape_mat;
-    }
-
-    public void setApe_mat(String ape_mat) {
-        this.ape_mat = ape_mat;
+    public void setRazon(String razon) {
+        this.razon = razon;
     }
 
     public String getRfc() {
@@ -75,51 +79,19 @@ public class Proveedor {
         this.direccion = direccion;
     }
 
-    public String getCod() {
-        return cod;
+    public String getCiudad() {
+        return ciudad;
     }
 
-    public void setCod(String cod) {
-        this.cod = cod;
+    public void setCiudad(String ciudad) {
+        this.ciudad = ciudad;
     }
 
-    public String getMunicipio() {
-        return municipio;
-    }
-
-    public void setMunicipio(String municipio) {
-        this.municipio = municipio;
-    }
-
-    public String getEstado() {
-        return estado;
-    }
-
-    public void setEstado(String estado) {
-        this.estado = estado;
-    }
-
-    public int getPais() {
-        return pais;
-    }
-
-    public void setPais(int pais) {
-        this.pais = pais;
-    }
-
-    public String getRazon() {
-        return razon;
-    }
-
-    public void setRazon(String razon) {
-        this.razon = razon;
-    }
-
-    public int getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(int telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 
@@ -131,29 +103,28 @@ public class Proveedor {
         this.correo = correo;
     }
 
-    public String getCuentac() {
-        return cuentac;
+    public String getEdo() {
+        return edo;
     }
 
-    public void setCuentac(String cuentac) {
-        this.cuentac = cuentac;
+    public void setEdo(String edo) {
+        this.edo = edo;
     }
 
-    public String getDias() {
-        return dias;
+    public String getMunicipio() {
+        return municipio;
     }
 
-    public void setDias(String dias) {
-        this.dias = dias;
+    public void setMunicipio(String municipio) {
+        this.municipio = municipio;
     }
 
-    public String getLimite() {
-        return limite;
+    public String getCuentabanco() {
+        return cuentabanco;
     }
 
-    public void setLimite(String limite) {
-        this.limite = limite;
+    public void setCuentabanco(String cuentabanco) {
+        this.cuentabanco = cuentabanco;
     }
-
-
+    
 }
