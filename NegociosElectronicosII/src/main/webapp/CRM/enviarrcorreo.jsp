@@ -220,7 +220,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--inner block start here-->
 <div class="inner-block">
     <div class="inbox">
-    	  <h2>Inbox Details</h2>
+    	  <h2>Enviar Correo</h2>
     	 <div class="col-md-4 compose">   	 	
     	 	<div class="mail-profile">
     	 		<div class="mail-pic">
@@ -247,24 +247,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     	 	<div class="col-md-8 compose-right">
 					<div class="inbox-details-default">
 						<div class="inbox-details-heading">
-							Compose New Message 
+							Escribir Nuevo Mensaje
 						</div>
 						<div class="inbox-details-body">
 							<div class="alert alert-info">
-								Please fill details to send a new message
+							Por favor complete los detalles para enviar un nuevo mensaje
 							</div>
 							<form class="com-mail">
-								<input type="text"  value="To :" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'To';}">
-								<input type="text"  value="Subject :" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Subject';}">
+								<input type="text"  value="Para :" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'To';}">
+								<input type="text"  value="Asunto :" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Subject';}">
 								
-								<textarea rows="6"  value="Message :" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message </textarea>
+								<textarea rows="6"  value="Message :" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Mensaje </textarea>
 								<div class="form-group">
 									<div class="btn btn-default btn-file">
-										<i class="fa fa-paperclip"> </i> Attachment
+										<i class="fa fa-paperclip"> </i> Adjuntar Archivos
 										<input type="file" name="attachment">
 									</div>
 								</div>
-								<input type="submit" value="Send Message"> 
+								<input type="submit" value="Enviar Correo"> 
 							</form>
 						</div>
 					</div>
