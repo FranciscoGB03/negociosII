@@ -756,7 +756,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		        <li><a href="charts.html"><i class="fa fa-bar-chart"></i><span>Charts</span></a></li>
 		        <li><a href="#"><i class="fa fa-envelope"></i><span>Mailbox</span><span class="fa fa-angle-right" style="float: right"></span></a>
 		        	 <ul id="menu-academico-sub" >
-			            <li id="menu-academico-avaliacoes" ><a href="inbox.html">Inbox</a></li>
+			            <li id="menu-academico-avaliacoes" ><a href="mailclientes.jsp">Inbox</a></li>
 			            <li id="menu-academico-boletim" ><a href="inbox-details.html">Compose email</a></li>
 		             </ul>
 		        </li>
