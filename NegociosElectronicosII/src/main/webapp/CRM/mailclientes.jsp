@@ -297,31 +297,31 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				        <div class="clearfix"> </div>
 				    </div>
 				    <div class="float-right">
-	                            <span class="text-muted m-r-sm">Showing 20 of 346 </span>
+	                            <span class="text-muted m-r-sm">Se muestran 20 de 34</span>
 	                            <div class="btn-group m-r-sm mail-hidden-options" style="display: inline-block;">
 	                                <div class="btn-group">
 	                                    <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-folder"></i> <span class="caret"></span></a>
 	                                    <ul class="dropdown-menu dropdown-menu-right" role="menu">
 	                                        <li><a href="#">Social</a></li>
-	                                        <li><a href="#">Forums</a></li>
-	                                        <li><a href="#">Updates</a></li>
+	                                        <li><a href="#">Foros</a></li>
+	                                        <li><a href="#">Actualizaciones</a></li>
 	                                        <li class="divider"></li>
-	                                        <li><a href="#">Spam</a></li>
-	                                        <li><a href="#">Trash</a></li>
+	                                        <li><a href="#">Correo no deseado</a></li>
+	                                        <li><a href="#">Basura</a></li>
 	                                        <li class="divider"></li>
-	                                        <li><a href="#">New</a></li>
+	                                        <li><a href="#">Nuevo</a></li>
 	                                    </ul>
 	                                </div>
 	                                <div class="btn-group">
 	                                    <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-tags"></i> <span class="caret"></span></a>
 	                                    <ul class="dropdown-menu dropdown-menu-right" role="menu">
-	                                        <li><a href="#">Work</a></li>
-	                                        <li><a href="#">Family</a></li>
+	                                        <li><a href="#">Trabajo</a></li>
+	                                        <li><a href="#">Familia</a></li>
 	                                        <li><a href="#">Social</a></li>
 	                                        <li class="divider"></li>
-	                                        <li><a href="#">Primary</a></li>
-	                                        <li><a href="#">Promotions</a></li>
-	                                        <li><a href="#">Forums</a></li>
+	                                        <li><a href="#">Prioritarios</a></li>
+	                                        <li><a href="#">Promociones</a></li>
+	                                        <li><a href="#">Foros</a></li>
 	                                    </ul>
 	                                </div>
 	                            </div>
@@ -1854,7 +1854,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		        <li><a href="#"><i class="fa fa-envelope"></i><span>Correo Clientes</span><span class="fa fa-angle-right" style="float: right"></span></a>
 		        	 <ul id="menu-academico-sub" >
 			            <li id="menu-academico-avaliacoes" ><a href="mailclientes.jsp">Inbox</a></li>
-			            <li id="menu-academico-boletim" ><a href="inbox-details.html">Compose email</a></li>
+			            <li id="menu-academico-boletim" ><a href="enviarrcorreo.jsp">Escribir correo</a></li>
 		             </ul>
 		        </li>
 		      </ul>
