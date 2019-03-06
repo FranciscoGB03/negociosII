@@ -239,7 +239,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     	 	    <div class="clearfix"> </div>
     	 	</div>
     	 	<div class="compose-block">
-    	 		<a href="inbox-details.html">Compose</a>
+    	 		<a href="enviarrcorreo.jsp">Escribir</a>
     	 	</div>
     	 	<div class="compose-bottom">
     	 		  <nav class="nav-sidebar">
