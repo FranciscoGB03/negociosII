@@ -41,14 +41,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="header-main">
 					<div class="header-left">
 							<div class="logo-name">
-									 <a href="index.html"> <h1>Shoppy</h1> 
+									 <a href="index.jsp"> <h1>Shoppy</h1> 
 									<!--<img id="logo" src="" alt="Logo"/>--> 
 								  </a> 								
 							</div>
 							<!--search-box-->
 								<div class="search-box">
 									<form>
-										<input type="text" placeholder="Search..." required="">	
+										<input type="text" placeholder="Buscar..." required="">	
 										<input type="submit" value="">					
 									</form>
 								</div><!--//end-search-box-->
@@ -62,90 +62,83 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<ul class="dropdown-menu">
 											<li>
 												<div class="notification_header">
-													<h3>You have 3 new messages</h3>
+													<h3>Tiene 3 nuevos mensajes</h3>
 												</div>
 											</li>
 											<li><a href="#">
 											   <div class="user_img"><img src="images/p4.png" alt=""></div>
 											   <div class="notification_desc">
-												<p>Lorem ipsum dolor</p>
-												<p><span>1 hour ago</span></p>
+												<p>Enviar pedido a Cuba</p>
+												<p><span>Hace una hora</span></p>
 												</div>
 											   <div class="clearfix"></div>	
 											</a></li>
 											<li class="odd"><a href="#">
 												<div class="user_img"><img src="images/p2.png" alt=""></div>
 											   <div class="notification_desc">
-												<p>Lorem ipsum dolor </p>
-												<p><span>1 hour ago</span></p>
+												<p>Revisar nuevos clientes</p>
+												<p><span>Hace 3 horas</span></p>
 												</div>
 											  <div class="clearfix"></div>	
 											</a></li>
 											<li><a href="#">
 											   <div class="user_img"><img src="images/p3.png" alt=""></div>
 											   <div class="notification_desc">
-												<p>Lorem ipsum dolor</p>
-												<p><span>1 hour ago</span></p>
+												<p>Agregar clientes premium</p>
+												<p><span>Hace 2 dias</span></p>
 												</div>
 											   <div class="clearfix"></div>	
 											</a></li>
 											<li>
 												<div class="notification_bottom">
-													<a href="#">See all messages</a>
+                                                                                                    <a href="inbox.jsp">Ver todos los mensajes</a>
 												</div> 
 											</li>
 										</ul>
 									</li>
 									<li class="dropdown head-dpdn">
-										<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-bell"></i><span class="badge blue">3</span></a>
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-bell"></i><span class="badge blue">2</span></a>
 										<ul class="dropdown-menu">
 											<li>
 												<div class="notification_header">
-													<h3>You have 3 new notification</h3>
+													<h3>Tienes 2 notificaciones</h3>
 												</div>
 											</li>
 											<li><a href="#">
 												<div class="user_img"><img src="images/p5.png" alt=""></div>
 											   <div class="notification_desc">
-												<p>Lorem ipsum dolor</p>
-												<p><span>1 hour ago</span></p>
+												<p>Revisar pedidos</p>
+												<p><span>Hace 10 minutos</span></p>
 												</div>
 											  <div class="clearfix"></div>	
 											 </a></li>
 											 <li class="odd"><a href="#">
 												<div class="user_img"><img src="images/p6.png" alt=""></div>
 											   <div class="notification_desc">
-												<p>Lorem ipsum dolor</p>
-												<p><span>1 hour ago</span></p>
+												<p>Enviar nuevas promociones</p>
+												<p><span>hace 1 hora</span></p>
 												</div>
 											   <div class="clearfix"></div>	
 											 </a></li>
 											 <li><a href="#">
 												<div class="user_img"><img src="images/p7.png" alt=""></div>
-											   <div class="notification_desc">
-												<p>Lorem ipsum dolor</p>
-												<p><span>1 hour ago</span></p>
-												</div>
+											  
 											   <div class="clearfix"></div>	
 											 </a></li>
-											 <li>
-												<div class="notification_bottom">
-													<a href="#">See all notifications</a>
-												</div> 
-											</li>
+											
 										</ul>
 									</li>	
 									<li class="dropdown head-dpdn">
-										<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-tasks"></i><span class="badge blue1">9</span></a>
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-tasks"></i><span class="badge blue1">4</span></a>
 										<ul class="dropdown-menu">
 											<li>
 												<div class="notification_header">
-													<h3>You have 8 pending task</h3>
+													<h3>Tiene 4 tareas pendientes</h3>
 												</div>
 											</li>
 											<li><a href="#">
 												<div class="task-info">
-													<span class="task-desc">Database update</span><span class="percentage">40%</span>
+													<span class="task-desc">Actualizar base de datos</span><span class="percentage">40%</span>
 													<div class="clearfix"></div>	
 												</div>
 												<div class="progress progress-striped active">
@@ -154,7 +147,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											</a></li>
 											<li><a href="#">
 												<div class="task-info">
-													<span class="task-desc">Dashboard done</span><span class="percentage">90%</span>
+													<span class="task-desc">Enviar nuevas promociones</span><span class="percentage">90%</span>
 												   <div class="clearfix"></div>	
 												</div>
 												<div class="progress progress-striped active">
@@ -163,7 +156,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											</a></li>
 											<li><a href="#">
 												<div class="task-info">
-													<span class="task-desc">Mobile App</span><span class="percentage">33%</span>
+													<span class="task-desc">Agregar nuevos clientes</span><span class="percentage">33%</span>
 													<div class="clearfix"></div>	
 												</div>
 											   <div class="progress progress-striped active">
@@ -172,18 +165,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											</a></li>
 											<li><a href="#">
 												<div class="task-info">
-													<span class="task-desc">Issues fixed</span><span class="percentage">80%</span>
+													<span class="task-desc">Agregar nuevos productos</span><span class="percentage">80%</span>
 												   <div class="clearfix"></div>	
 												</div>
 												<div class="progress progress-striped active">
 													 <div class="bar  blue" style="width: 80%;"></div>
 												</div>
 											</a></li>
-											<li>
-												<div class="notification_bottom">
-													<a href="#">See all pending tasks</a>
-												</div> 
-											</li>
 										</ul>
 									</li>	
 								</ul>
@@ -197,8 +185,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											<div class="profile_img">	
 												<span class="prfil-img"><img src="images/p1.png" alt=""> </span> 
 												<div class="user-name">
-													<p>Malorum</p>
-													<span>Administrator</span>
+													<p>Francisco</p>
+													<span>Administrador</span>
 												</div>
 												<i class="fa fa-angle-down lnr"></i>
 												<i class="fa fa-angle-up lnr"></i>
@@ -206,9 +194,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											</div>	
 										</a>
 										<ul class="dropdown-menu drp-mnu">
-											<li> <a href="#"><i class="fa fa-cog"></i> Settings</a> </li> 
-											<li> <a href="#"><i class="fa fa-user"></i> Profile</a> </li> 
-											<li> <a href="#"><i class="fa fa-sign-out"></i> Logout</a> </li>
+											<li> <a href="#"><i class="fa fa-cog"></i> Ajustes</a> </li> 
+											<li> <a href="#"><i class="fa fa-user"></i> Perfil</a> </li> 
+											<li> <a href="#"><i class="fa fa-sign-out"></i> Cerrar sesion</a> </li>
 										</ul>
 									</li>
 								</ul>
@@ -245,8 +233,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     	 			<a href="#"><img src="images/b3.png" alt=""></a>
     	 		</div>
     	 		<div class="mailer-name"> 			
-    	 				<h5><a href="#">Malorum</a></h5>  	 				
-    	 			     <h6><a href="mailto:info@example.com">malorum@gmail.com</a></h6>   
+    	 				<h5><a href="#">Francisco</a></h5>  	 				
+    	 			     <h6><a href="mailto:info@example.com">francisco_tec@gmail.com</a></h6>   
     	 		</div>
     	 	    <div class="clearfix"> </div>
     	 	</div>
@@ -256,11 +244,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     	 	<div class="compose-bottom">
     	 		  <nav class="nav-sidebar">
 					<ul class="nav tabs">
-			          <li class="active"><a href="#tab1" data-toggle="tab"><i class="fa fa-inbox"></i>Inbox <span>9</span><div class="clearfix"></div></a></li>
-			          <li class=""><a href="#tab2" data-toggle="tab"><i class="fa fa-envelope-o"></i>Sent</a></li>
-			          <li class=""><a href="#tab3" data-toggle="tab"><i class="fa fa-star-o"></i>Important</a></li> 
-			          <li class=""><a href="#tab4" data-toggle="tab"><i class="fa fa-pencil-square-o"></i>Draft <span>6</span><div class="clearfix"></div></a></li>  
-			          <li class=""><a href="#tab5" data-toggle="tab"><i class="fa fa-trash-o"></i>Delete</a></li>                              
+			          <li class="active"><a href="#tab1" data-toggle="tab"><i class="fa fa-inbox"></i>Entrada <span>9</span><div class="clearfix"></div></a></li>
+			          <li class=""><a href="#tab2" data-toggle="tab"><i class="fa fa-envelope-o"></i>Enviados</a></li>
+			          <li class=""><a href="#tab3" data-toggle="tab"><i class="fa fa-star-o"></i>Importantes</a></li> 
+			          <li class=""><a href="#tab4" data-toggle="tab"><i class="fa fa-pencil-square-o"></i>Borradores <span>6</span><div class="clearfix"></div></a></li>  
+			          <li class=""><a href="#tab5" data-toggle="tab"><i class="fa fa-trash-o"></i>Borrados</a></li>                              
 					</ul>
 				</nav>
     	 	</div>
@@ -282,26 +270,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				                <li>
 				                    <a href="#" title="">
 				                        <i class="fa fa-pencil-square-o icon_9"> </i>
-				                        Edit
+				                        Editar
 				                    </a>
 				                </li>
 				                <li>
 				                    <a href="#" title="">
 				                        <i class="fa fa-calendar icon_9"> </i>
-				                        Schedule
+				                        Programar
 				                    </a>
 				                </li>
 				                <li>
 				                    <a href="#" title="">
 				                        <i class="fa fa-download icon_9"> </i>
-				                        Download
+				                        Descargar
 				                    </a>
 				                </li>
 				                <li class="divider"></li>
 				                <li>
 				                    <a href="#" class="font-red" title="">
 				                        <i class="fa fa-times" icon_9=""> </i>
-				                        Delete
+				                        Borrar
 				                    </a>
 				                </li>
 				            </ul>
@@ -787,7 +775,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				        <div class="clearfix"> </div>
 				    </div>
 				    <div class="float-right">
-	                            <span class="text-muted m-r-sm">Showing 20 of 346 </span>
+	                            <span class="text-muted m-r-sm">Se muestran 20 de 30 </span>
 	                            <div class="btn-group m-r-sm mail-hidden-options" style="display: inline-block;">
 	                                <div class="btn-group">
 	                                    <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-folder"></i> <span class="caret"></span></a>
@@ -1852,48 +1840,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			  </a> </div>		  
 		    <div class="menu">
 		      <ul id="menu" >
-		        <li id="menu-home" ><a href="index.html"><i class="fa fa-tachometer"></i><span>Dashboard</span></a></li>
-		        <li><a href="#"><i class="fa fa-cogs"></i><span>Components</span><span class="fa fa-angle-right" style="float: right"></span></a>
+		        <li id="menu-home" ><a href="index.jsp"><i class="fa fa-tachometer"></i><span>Dashboard</span></a></li>
+		        <li><a href="#"><i class="fa fa-cogs"></i><span>Proveedores</span><span class="fa fa-angle-right" style="float: right"></span></a>
 		          <ul>
-		            <li><a href="grids.html">Grids</a></li>
-		            <li><a href="portlet.html">Portlets</a></li>		            
-		          </ul>
-		        </li>
-		        <li id="menu-comunicacao" ><a href="#"><i class="fa fa-book nav_icon"></i><span>Element</span><span class="fa fa-angle-right" style="float: right"></span></a>
-		          <ul id="menu-comunicacao-sub" >
-		            <li id="menu-mensagens" style="width: 120px" ><a href="buttons.html">Buttons</a>		              
-		            </li>
-		            <li id="menu-arquivos" ><a href="typography.html">Typography</a></li>
-		             <li id="menu-arquivos" ><a href="icons.html">Icons</a></li>
-		          </ul>
-		        </li>
-		          <li><a href="maps.html"><i class="fa fa-map-marker"></i><span>Maps</span></a></li>
-		        <li id="menu-academico" ><a href="#"><i class="fa fa-file-text"></i><span>Pages</span><span class="fa fa-angle-right" style="float: right"></span></a>
-		          <ul id="menu-academico-sub" >
-		          	 <li id="menu-academico-boletim" ><a href="login.html">Login</a></li>
-		            <li id="menu-academico-avaliacoes" ><a href="signup.html">Sign Up</a></li>		           
+		            <li><a href="IngresarProveedor.jsp">Ingresar</a></li>
+                            
+		            <li><a href="ConsultarProveedores.jsp">Consultar</a></li>	 	            
 		          </ul>
 		        </li>
 		        
-		        <li><a href="charts.html"><i class="fa fa-bar-chart"></i><span>Charts</span></a></li>
-		        <li><a href="#"><i class="fa fa-envelope"></i><span>Mailbox</span><span class="fa fa-angle-right" style="float: right"></span></a>
+		        
+		        
+		        <li><a href="#"><i class="fa fa-envelope"></i><span>Correo Clientes</span><span class="fa fa-angle-right" style="float: right"></span></a>
 		        	 <ul id="menu-academico-sub" >
-			            <li id="menu-academico-avaliacoes" ><a href="inbox.html">Inbox</a></li>
+			            <li id="menu-academico-avaliacoes" ><a href="mailclientes.jsp">Inbox</a></li>
 			            <li id="menu-academico-boletim" ><a href="inbox-details.html">Compose email</a></li>
 		             </ul>
 		        </li>
-		         <li><a href="#"><i class="fa fa-cog"></i><span>System</span><span class="fa fa-angle-right" style="float: right"></span></a>
-		         	 <ul id="menu-academico-sub" >
-			            <li id="menu-academico-avaliacoes" ><a href="404.html">404</a></li>
-			            <li id="menu-academico-boletim" ><a href="blank.html">Blank</a></li>
-		             </ul>
-		         </li>
-		         <li><a href="#"><i class="fa fa-shopping-cart"></i><span>E-Commerce</span><span class="fa fa-angle-right" style="float: right"></span></a>
-		         	<ul id="menu-academico-sub" >
-			            <li id="menu-academico-avaliacoes" ><a href="product.html">Product</a></li>
-			            <li id="menu-academico-boletim" ><a href="price.html">Price</a></li>
-		             </ul>
-		         </li>
 		      </ul>
 		    </div>
 	 </div>
