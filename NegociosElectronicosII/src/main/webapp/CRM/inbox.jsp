@@ -1860,7 +1860,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		        <li><a href="#"><i class="fa fa-envelope"></i><span>Correo Clientes</span><span class="fa fa-angle-right" style="float: right"></span></a>
 		        	 <ul id="menu-academico-sub" >
 			            <li id="menu-academico-avaliacoes" ><a href="mailclientes.jsp">Inbox</a></li>
-			            <li id="menu-academico-boletim" ><a href="inbox-details.html">Compose email</a></li>
+			            <li id="menu-academico-boletim" ><a href="enviarrcorreo.jsp">Escribir correo</a></li>
 		             </ul>
 		        </li>
 		      </ul>
