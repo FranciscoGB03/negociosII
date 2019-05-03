@@ -1,0 +1,253 @@
+create table estatus(
+	id serial PRIMARY KEY,
+	status VARCHAR(20),
+        descripcion varchar(30) 
+);
+create table ofertas(
+	id serial PRIMARY KEY,
+	nombre VARCHAR(30),
+        descripcion varchar(200) 
+);
+
+create table cliente(id serial primary key,
+nombre varchar(50),
+ape_pat varchar(50),
+ape_mat varchar(50),
+correo varchar(50),
+correo2 varchar(50),
+cuentabanco varchar(50),
+telefono varchar(10),
+rfc varchar(13),
+direccion varchar(100),
+codpos numeric(5,0),
+municipio varchar(50),
+edo varchar(50),
+razon varchar(150),
+estatus integer,
+oferta integer,
+FOREIGN KEY(estatus) REFERENCES estatus(id) ON UPDATE CASCADE,
+FOREIGN KEY(oferta) REFERENCES ofertas(id) ON UPDATE CASCADE
+);
+
+create table ventas(
+id serial PRIMARY KEY,
+fecha date,
+direccion VARCHAR(100),
+precio numeric(10),
+cliente integer ,
+FOREIGN KEY(cliente) REFERENCES cliente(id) ON UPDATE CASCADE
+);
+
+create table tipo(
+	id serial PRIMARY KEY,
+	categoria VARCHAR(20),
+        descripcion varchar(30) 
+);
+
+create table producto (
+id SERIAL PRIMARY KEY,
+nombre varchar(100),
+precio_compra numeric(10,2),
+precio_venta numeric(10,2),
+cantidad numeric(10),
+iva numeric(10,2),
+monto_total numeric(10,2),
+tipo integer,
+peso numeric(5),
+FOREIGN KEY(tipo) REFERENCES Tipo(id) ON UPDATE CASCADE);
+
+create table detalle_venta(
+id serial PRIMARY KEY,
+venta integer,
+precio_total numeric (10,2),
+descripcion varchar(100),
+cantidad numeric(10,2),
+producto integer,
+FOREIGN KEY(venta) REFERENCES ventas(id) ON UPDATE CASCADE,
+FOREIGN KEY(producto) REFERENCES producto(id) ON UPDATE CASCADE);
+
+create table cuentasat(id serial not null,
+codigosat numeric(5,2),
+descripcion varchar(200),
+primary key(id)
+);
+
+create table cuentaempresa(id serial not null,
+clave varchar(7),
+id_sat INTEGER,
+descripcion varchar(100),
+naturaleza varchar(20),
+FOREIGN KEY (id_sat) REFERENCES cuentasat(id) ON UPDATE CASCADE,
+PRIMARY KEY (id)
+);
+
+create table proveedor(
+id SERIAL PRIMARY KEY,
+razon_social varchar(20),
+rfc varchar(13),
+direccion varchar(30),
+ciudad varchar(20),
+telefono numeric(10),
+correo varchar(30),
+estado varchar(30),
+cuenta_banca varchar(20),
+nombre varchar(20),
+municipio varchar(20),
+empresa numeric(10));
+
+create table compra(
+id SERIAL PRIMARY KEY,
+proveedor integer,
+direccion varchar(30),
+monto_total numeric (10,2),
+FOREIGN KEY(proveedor) REFERENCES proveedor(id) ON UPDATE CASCADE);
+
+create table detalle_compra(
+id SERIAL PRIMARY KEY,
+producto integer ,
+precio_unitario numeric(10,2),
+cantidad numeric(5),
+compra integer,
+FOREIGN KEY(compra) REFERENCES compra(id) ON UPDATE CASCADE,
+FOREIGN KEY(producto) REFERENCES Producto(id) ON UPDATE CASCADE);
+
+create table estado(
+	id serial PRIMARY KEY,
+	estado VARCHAR(30),
+        descripcion varchar(30) 
+);
+
+create table tipo_tarea(
+	id serial PRIMARY KEY,
+	tipo VARCHAR(30),
+        descripcion varchar(30) 
+);
+
+create table tarea(
+id serial PRIMARY KEY,
+fecha_fin date,
+asunto varchar(50),
+estado integer,
+descripcion varchar(30) ,
+cliente integer,
+tipo_tarea integer,
+FOREIGN KEY(estado) REFERENCES estado(id) ON UPDATE CASCADE,
+FOREIGN KEY(cliente) REFERENCES cliente(id) ON UPDATE CASCADE,
+FOREIGN KEY(tipo_tarea) REFERENCES tipo_tarea(id) ON UPDATE CASCADE
+);
+
+create table status(
+	id serial PRIMARY KEY,
+	status VARCHAR(30),
+        descripcion varchar(30) 
+);
+
+create table area(id SERIAL PRIMARY KEY,
+	nombre VARCHAR(20),
+        descripcion varchar(30)
+);
+
+create table puesto(
+id SERIAL PRIMARY KEY,
+puesto VARCHAR(30),
+area integer,
+descripcion varchar(30),
+FOREIGN KEY(area) REFERENCES area(id) ON UPDATE CASCADE
+);
+
+create table empleado(
+	id SERIAL PRIMARY KEY,
+	nombre VARCHAR(15),
+	primer_apellido VARCHAR(15),
+	segundo_apellido VARCHAR(15),
+	curp VARCHAR(18),
+	rfc VARCHAR(13),
+	telefono VARCHAR(15),
+	correo VARCHAR(16),
+	usuario VARCHAR(16),
+	contrasena VARCHAR(10),
+	direccion VARCHAR(100),
+	sueldo NUMERIC,
+	fecha_ingreso date,
+area INTEGER REFERENCES area (id),
+	tareas INTEGER REFERENCES tarea(id),
+	status INTEGER REFERENCES status (id)
+);
+create table log(
+id_emp int not null,
+area varchar(30) not null,
+des varchar(80) not null,
+fecha date default(CURRENT_DATE),
+hora time default(CURRENT_TIME),
+FOREIGN KEY (id_emp) references empleado(id)
+);
+
+create table calen_contable(id serial not null primary key, 
+clave varchar(7),
+periodo numeric(4,0),
+fechaini date,
+fechafin date,
+estatus varchar(10)
+);
+
+create table asientogeneral(id serial not null,
+clave varchar(10),
+idarea integer,
+idperiodo integer,
+fecha date,
+concepto varchar(100),
+FOREIGN KEY (idarea) REFERENCES area(id) ON UPDATE CASCADE,
+FOREIGN KEY (idperiodo) REFERENCES calen_contable(id) ON UPDATE CASCADE,
+PRIMARY KEY (id)
+);
+create table factura(id serial not null,
+		clave varchar(10),
+		fecha date,
+		tipo varchar(15),
+		nombrecli varchar(100),
+		nombrepro varchar(100),
+		total numeric(7,2),
+		PRIMARY KEY(id)
+);
+
+alter table factura
+ add constraint clavefactu_uni
+ unique (clave);
+
+create table cuentacliente(id serial not null,
+			  clave varchar(10),
+			  idcuentaempresa integer,
+			  idcliente INTEGER,
+	                  FOREIGN KEY (idcuentaempresa) REFERENCES cuentaempresa(id) ON UPDATE CASCADE,
+	                  FOREIGN KEY (idcliente) REFERENCES cliente(id) ON UPDATE CASCADE,
+			  PRIMARY KEY (id)
+);
+
+create table cuentaproveedor(id serial not null,
+			  clave varchar(10),
+			  idcuentaempresa integer,
+			  idproveedor INTEGER,
+	                  FOREIGN KEY (idcuentaempresa) REFERENCES cuentaempresa(id) ON UPDATE CASCADE,
+	                  FOREIGN KEY (idproveedor) REFERENCES proveedor(id) ON UPDATE CASCADE,
+			  PRIMARY KEY (id)
+);
+
+
+create table asientodetalle(id serial not null,
+idasientog integer,
+idcuentacli integer,
+idcuentapro integer,
+monto numeric (9,2),
+descripcion varchar(100),
+idfactu integer,
+FOREIGN KEY (idasientog) REFERENCES asientogeneral(id) ON UPDATE CASCADE,
+FOREIGN KEY (idcuentacli) REFERENCES cuentacliente(id) ON UPDATE CASCADE,
+FOREIGN KEY (idcuentapro) REFERENCES cuentaproveedor(id) ON UPDATE CASCADE,
+FOREIGN KEY (idfactu) REFERENCES factura(id) ON UPDATE CASCADE,
+PRIMARY KEY (id)
+);
+ 
+
+ALTER TABLE compra ADD peso numeric(5);
+
+
