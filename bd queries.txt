@@ -1,3 +1,8 @@
+
+///********************notas***********************///
+la base de datos se llama dbabarrotes
+la unidad de peso es en kilos.
+//****************************************************//
 create table estatus(
 	id serial PRIMARY KEY,
 	status VARCHAR(20),
