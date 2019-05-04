@@ -255,4 +255,7 @@ PRIMARY KEY (id)
 
 ALTER TABLE compra ADD peso numeric(5);
 
-
+insert into  estado(estado,descripcion) values
+('potencial','darle prioridad'),
+('actual','realizan compras seguido'),
+('inactivo','no hace compras actualmente');
