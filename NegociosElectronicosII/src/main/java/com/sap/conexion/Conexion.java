@@ -24,7 +24,7 @@ public class Conexion {
         Properties connProp = new Properties();
         connProp.put("user", "postgres");
         connProp.put("password", "root");
-        conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Abarrotes", connProp);
+        conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/dbabarrotes", connProp);
     }
         
 

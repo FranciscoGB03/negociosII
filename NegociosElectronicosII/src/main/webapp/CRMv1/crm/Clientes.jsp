@@ -91,7 +91,7 @@
             <div id="vertical-bar"></div>
             <br>
             <!--Columna Central-->
-             <center><h1 >Bienvenido al CRM </h1></center>
+             <center><h1>Bienvenido al CRM </h1></center>
            
             <!--columna de la derecha-->
         
