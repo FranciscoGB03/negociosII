@@ -4,6 +4,9 @@
     Author     : claudia
 --%>
 
+<%@page import="com.crm.clientes.clases.Consultas"%>
+<%@page import="com.crm.clientes.clases.Clientes"%>
+<%@page import="java.util.LinkedList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -104,8 +107,8 @@
                     <input type="text" class="form-control col-12" name="apClientes" id="apClientes" required="required">
                 </div>
                 <div class="col-xs-4 col-md-4">
-                   <label for="correo">Correo:</label>
-                     <input type="text" class="form-control col-12" name="correo" id="correo" required="required">
+                   <label for="apmat">Apellido Materno:</label>
+                     <input type="text" class="form-control col-12" name="apmat" id="apmat" required="required">
                </div>
                 </div>
                  <div class="row">
@@ -118,7 +121,7 @@
                     <input type="text" class="form-control col-12" name="correo2" id="correo2" required="required">
                 </div>
                  <div class="col-xs-4 col-md-4">
-                    <label for="municipiocliente">Estado:</label>
+                    <label for="estadoClientes">Estado:</label>
                     <input type="text" class="form-control col-12" name="estadoClientes" id="estadoClientes" required="required">
                 </div>
                  
@@ -141,22 +144,25 @@
                     <input type="text" class="form-control col-12"name="tel" id="tel" required="required">
                 </div>
                 <div class="col-xs-4 col-md-4">
-                    <label for="municipiocliente">RFC:</label>
+                    <label for="rfcClientes">RFC:</label>
                     <input type="text" class="form-control col-12" name="rfcClientes" id="rfcClientes" required="required">
                 </div>
                 <div class="col-xs-4 col-md-4">
-                    <label for="municipiocliente">Cuenta Bancaria:</label>
+                    <label for="cuentabancariaClientes">Cuenta Bancaria:</label>
                     <input type="number" class="form-control col-12" name="cuentabancariaClientes" id="cuentabancariaClientes" required="required">
                 </div>
                 </div>
                  <div class="row"> 
                  <div class="col-xs-4 col-md-4">
-                    <label for="tipo">Estatus</label>
-                                 <select id="tipo" name="tipo" class="form-control">
-                                    <option value="x">Seleccione...</option>
-                                    <option value="1">Potencial</option>
-                                    <option value="2">Activo</option>
-                                    <option value="3">Inactivo</option>
+                    <label for="estatus">Estatus</label>
+                                 <select id="estatus" name="estatus" class="form-control">
+                                    <option value="x">Seleccione...</option> 
+                                    <% LinkedList<Clientes> h =Consultas.opcionesCliente();
+                                for (int i=0;i<h.size();i++)
+                                {                                   
+                                   out.println("<option value='"+h.get(i).getId()+"'>"+h.get(i).getEstatus()+"</option>");                                   
+                                }
+                            %>
                                 </select>
                 </div>
                      <div class="col-xs-4 col-md-4">
