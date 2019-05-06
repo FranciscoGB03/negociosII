@@ -260,4 +260,3 @@ insert into  estatus(status,descripcion) values
 ('actual','realizan compras seguido'),
 ('inactivo','no hace compras actualmente');
 
-alter table cliente rename column cuentabanco to tarjeta;
