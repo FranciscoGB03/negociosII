@@ -37,8 +37,8 @@ public class CrearCliente extends HttpServlet {
             throws ServletException, IOException, ClassNotFoundException, SQLException {
         response.setContentType("text/html;charset=UTF-8");
        Conexion c = new Conexion();
-       String nombre = request.getParameter("nombrecliente");
-   String apepat = request.getParameter("apcliente");
+       String nombre = request.getParameter("nombre");
+   String apepat = request.getParameter("appat");
    String apemat = request.getParameter("apmat");
    String correo = request.getParameter("correo");
    String correo2 = request.getParameter("correo2");
@@ -49,24 +49,40 @@ public class CrearCliente extends HttpServlet {
    String codpos = request.getParameter("code");
    String municipio= request.getParameter("municipio");
    String edo = request.getParameter("estadoClientes");
-   String razon = request.getParameter("clave");
+   String razon = request.getParameter("razon");
    String estatus = request.getParameter("estatus");
-   String oferta= request.getParameter("razon");
-   
    //CAMPOS DE LA BASE DE DATOS//
-   
+   String campo="nombre,ape_pat,ape_mat,correo,correo2,cuentabanco,telefono,rfc,direccion,codpos,municipio,edo,razon,estatus";
+   //VARIABLES
+   String variables="'"+nombre+
+           "','"+apepat+
+           "','"+apemat+
+           "','"+correo+
+           "','"+correo2+   
+           "','"+cuentaBanco+
+           "','"+tel+
+           "','"+rfc+
+           "','"+direccion+
+           "',"+codpos+
+           ",'"+municipio+
+           "','"+edo+
+           "','"+razon+"',"+estatus;
+   //codigo para insertar en la base de datos*/
+
+         c.insertar(campo, "cliente",variables);
+         
+         response.sendRedirect("crm/CrearCliente.jsp");
     }
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+
     /**
-     * Handles the HTTP <code>GET</code> method.
+     * Handles the HTTP <code>POST</code> method.
      *
      * @param request servlet request
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

@@ -1,9 +1,12 @@
 <%-- 
-    Document   : ModificarCliente
-    Created on : 3/05/2019, 01:49:56 PM
+    Document   : ClientesPotenciales
+    Created on : 1/05/2019, 02:31:25 PM
     Author     : claudia
 --%>
 
+<%@page import="com.crm.clientes.clases.Consultas"%>
+<%@page import="com.crm.clientes.clases.Clientes"%>
+<%@page import="java.util.LinkedList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -29,13 +32,13 @@
             
             <div class="collapse navbar-collapse" id="int_navbar">
                 <ul class="navbar-nav mr-auto">
-                   <li class="nav-item dropdown">
+                    <li class="nav-item dropdown">
                         <a href="#tarea.jsp" class="nav-link dropdown-toggle text-white" id="producto" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tareas</a>
                         <div class="dropdown-menu bg-primary" aria-labelledby="inventario">
                             <a class="nav-link text-white" href="CrearTarea.jsp">Crear Tarea</a>
                             <a class="nav-link text-white" href="tarea.jsp">Acciones</a>
                      </div> 
-                   </li>
+                    </li>  
                     <li class="nav-item dropdown">
                         <a href="#Clientes.jsp" class="nav-link dropdown-toggle text-white" id="producto" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Clientes</a>
                         <div class="dropdown-menu bg-primary" aria-labelledby="inventario">
@@ -88,12 +91,57 @@
                   </div>
                 </div>            
             </div>
-            <div id="vertical-bar"></div>
+       
+    
             <br>
             <!--Columna Central-->
-             <center><h1 >Bienvenido al CRM </h1></center>
-           
-            <!--columna de la derecha-->
+            <div class="col-sm-8">
+        <div class="card">
+            <div class="card-body">
+      <div class="col-xs-offset-6 col-md-offset-6 central">
+              <div class="container">
+                <h4>Clientes Potenciales</h4>
+              </div>
+            </div>
+    <table class="table-striped table table-bordered table-hover">
         
+      <tr>
+        <th>
+          Nombre 
+        </th>
+        <th>
+          Correo
+        </th>
+        <th>
+          Correo2
+        </th>
+        <th>
+          Telefono   
+        </th>
+      </tr>
+      
+      <%
+                        LinkedList<Clientes> lista =Consultas.ConsultCliente();
+                        for (int i=0;i<lista.size();i++)
+                        {
+                           out.println("<tr>");                               
+                           out.println("<td>"+lista.get(i).getNombre()+"</td>");
+                           out.println("<td>"+lista.get(i).getCorreo()+"</td>");
+                           out.println("<td>"+lista.get(i).getCorreo2()+"</td>");
+                           out.println("<td>"+lista.get(i).getTel()+"</td>");
+                           out.println("</tr>");
+                        }
+                    %>
+    </table>
+       </div>
+        </div>  
+    
+    </div>
+        </div>
+ </div>
+            <!--columna de la derecha-->
+        </div>
+ </div>
     </body>
 </html>
+

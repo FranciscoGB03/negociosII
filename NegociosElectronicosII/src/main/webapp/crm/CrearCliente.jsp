@@ -1,9 +1,12 @@
 <%-- 
-    Document   : ClientesPotenciales
-    Created on : 1/05/2019, 02:31:25 PM
+    Document   : CrearCliente
+    Created on : 1/05/2019, 02:29:56 PM
     Author     : claudia
 --%>
 
+<%@page import="com.crm.clientes.clases.Consultas"%>
+<%@page import="com.crm.clientes.clases.Clientes"%>
+<%@page import="java.util.LinkedList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -17,7 +20,6 @@
         <!-- Include all compiled plugins (below), or include individual files as needed --> 
         <script src="../Recursos/Bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
         <script src="../Recursos/Bootstrap/include/popper.min.js" type="text/javascript"></script>
-      
     </head>
 <body>
     <header class="sticky-top">
@@ -88,12 +90,101 @@
                   </div>
                 </div>            
             </div>
-            <div id="vertical-bar"></div>
+                  
+            <hr class="v" />
+            <!----COLUMNA DERECHA------------------------------------------------------------------->
+           <div class="col-xs-8 col-md-8 central table-responsive jumbotron">
+             <h1 class="text-uppercase text-center">Agregar Cliente</h1>
+             <br>
+             <form  action="../CrearCliente" method="post" >
+                <div class="row">
+                 <div class="col-xs-4 col-md-4">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" class="form-control col-12" name="nombre" id="nombre" required="required">
+                </div>
+                <div class="col-xs-4 col-md-4">
+                    <label for="appat">Apellido Paterno:</label>
+                    <input type="text" class="form-control col-12" name="appat" id="appat" required="required">
+                </div>
+                <div class="col-xs-4 col-md-4">
+                   <label for="apmat">Apellido Materno:</label>
+                     <input type="text" class="form-control col-12" name="apmat" id="apmat" required="required">
+               </div>
+                </div>
+                 <div class="row">
+                     <div class="col-xs-4 col-md-4">
+                    <label for="correo">Correo:</label>
+                     <input type="text" class="form-control col-12" name="correo" id="correo" required="required">
+                </div>
+                <div class="col-xs-4 col-md-4">
+                    <label for="correo2">Correo 2:</label>
+                    <input type="text" class="form-control col-12" name="correo2" id="correo2" required="required">
+                </div>
+                 <div class="col-xs-4 col-md-4">
+                    <label for="estadoClientes">Estado:</label>
+                    <input type="text" class="form-control col-12" name="estadoClientes" id="estadoClientes" required="required">
+                </div>
+                 
+                </div>
+                <div class="row">
+                    <div class="col-xs-4 col-md-4">
+                    <label for="municipio">Municipio:</label>
+                    <input type="text" class="form-control col-12"name="municipio" id="municipio" required="required">
+                </div> 
+                <div class="col-xs-8 col-md-8">
+                    <label for="direccion">Dirección:</label>
+                    <input type="text" class="form-control col-12" name="direccion" id="direccion" required="required">
+                </div>
+                 
+                </div>
+                
+                <div class="row"> 
+                    <div class="col-xs-4 col-md-4">
+                    <label for="tel">Telefono:</label>
+                    <input type="text" class="form-control col-12"name="tel" id="tel" required="required">
+                </div>
+                <div class="col-xs-4 col-md-4">
+                    <label for="rfcClientes">RFC:</label>
+                    <input type="text" class="form-control col-12" name="rfcClientes" id="rfcClientes" required="required">
+                </div>
+                <div class="col-xs-4 col-md-4">
+                    <label for="cuentabancariaClientes">Tarjeta:</label>
+                    <input type="number" class="form-control col-12" name="cuentabancariaClientes" id="cuentabancariaClientes" required="required">
+                </div>
+                </div>
+                 <div class="row"> 
+                 <div class="col-xs-4 col-md-4">
+                    <label for="estatus">Estatus</label>
+                                 <select id="estatus" name="estatus" class="form-control">
+                                    <option value="x">Seleccione...</option>
+                                    <option value="1">Potencial</option>
+                                    <option value="2">Actual</option>
+                                    <option value="3">Inactivo</option>
+                                </select>
+                </div>
+                     <div class="col-xs-4 col-md-4">
+                    <label for="code">Codigo postal:</label>
+                    <input type="number" class="form-control col-12" name="code" id="code" required="required">
+                </div>
+                     <div class="col-xs-4 col-md-4">
+                    <label for="razon">Razon social:</label>
+                    <input type="text" class="form-control col-12" name="razon" id="razon" required="required">
+                </div>
+                 </div>
             <br>
-            <!--Columna Central-->
-             <center><h1 >Bienvenido al CRM </h1></center>
-           
-            <!--columna de la derecha-->
-        
+            <center>
+            <div>
+            <input type="submit" value="Agregar" class="btn btn-primary"/>    
+            </div>
+            </center>
+            
+            </form>
+            
+        </div>
+        <!--columna de la derecha-->
+        <div class="col-xs-3 col-md-3 derecha table-responsive">
+        </div>
+    </div>
+</div>
     </body>
 </html>
