@@ -252,10 +252,11 @@ FOREIGN KEY (idfactu) REFERENCES factura(id) ON UPDATE CASCADE,
 PRIMARY KEY (id)
 );
  
-
+// cambios de la base de datos que -----------------------------------------------------------------------------
 ALTER TABLE compra ADD peso numeric(5);
 
 insert into  estatus(status,descripcion) values
 ('potencial','darle prioridad'),
 ('actual','realizan compras seguido'),
 ('inactivo','no hace compras actualmente');
+
