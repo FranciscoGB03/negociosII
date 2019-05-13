@@ -121,7 +121,7 @@
       </tr>
       
       <%
-                        LinkedList<Clientes> lista =Consultas.ConsultCliente();
+                        LinkedList<Clientes> lista =Consultas.ConsultClienteP();
                         for (int i=0;i<lista.size();i++)
                         {
                            out.println("<tr>");                               

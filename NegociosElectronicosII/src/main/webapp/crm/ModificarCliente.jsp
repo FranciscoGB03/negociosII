@@ -88,12 +88,8 @@
                   </div>
                 </div>            
             </div>
-            <div id="vertical-bar"></div>
             <br>
             <!--Columna Central-->
-        </div>
- </div>
-    <div class="row">
         <div class="col-xs-6 col-md-6 central" id="tabla">
             <div class="jumbotron">
                 <div class="container">
@@ -101,7 +97,7 @@
                     <div class="container">
                         <form role="form" action="../ModificarClient" method="post">                
                             <div class="form-group">
-                                <label for="clavep">Ingresa el id del cliente:</label>                            
+                                <label for="id">Id</label>                            
                                 <input id="clavep" name="clavep" class="form-control" type="text" required="required"/>
                             </div>
                             <div class="form-group">
@@ -111,7 +107,7 @@
                         <br>
                         <form role="form" action="../ActualizarPeriodo" method="post">                            
                             <div class="form-group">
-                                <label for="fechaini">Clave a Modificar:</label>                                                                
+                                <label for="fechaini">Id:</label>                                                                
                                 <%out.println("<input id='claveperiodo' name='claveperiodo' class='form-control' type='text' value="+request.getSession().getAttribute("clave")+">");%>
                             </div>
                             <div class="form-group">
@@ -149,5 +145,7 @@
             </div>
         </div>
         </div>
+ </div>
+                                    
     </body>
 </html>
