@@ -48,10 +48,11 @@ public class Consultas {
         conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/dbabarrotes", connProp);
         Statement stmt;        
         stmt = conn.createStatement();
-        ResultSet rs = stmt.executeQuery("SELECT cl.nombre,cl.ape_pat,cl.ape_mat,cl.correo,cl.correo2,cl.telefono,s.status " +
+        ResultSet rs = stmt.executeQuery("SELECT cl.id,cl.nombre,cl.ape_pat,cl.ape_mat,cl.correo,cl.correo2,cl.telefono,s.status " +
 "FROM estatus s, cliente cl  where cl.estatus=s.id");
             while (rs.next()) {
-                Clientes p=new Clientes();           
+                Clientes p=new Clientes(); 
+                p.setId(rs.getInt("id"));          
                 p.setNombre(rs.getString("nombre")); 
                 p.setApepat(rs.getString("ape_pat"));
                 p.setApemat(rs.getString("ape_mat"));
@@ -78,7 +79,8 @@ public class Consultas {
         stmt = conn.createStatement();
         ResultSet rs = stmt.executeQuery("SELECT cl.id,cl.nombre,cl.ape_pat,cl.ape_mat,cl.correo,cl.correo2,cl.telefono FROM estatus s, cliente cl  where cl.estatus=1 and cl.estatus=s.id");
             while (rs.next()) {
-                Clientes p=new Clientes();           
+                Clientes p=new Clientes(); 
+                p.setId(rs.getInt("id"));
                 p.setNombre(rs.getString("nombre")); 
                 p.setApepat(rs.getString("ape_pat"));
                 p.setApemat(rs.getString("ape_mat"));

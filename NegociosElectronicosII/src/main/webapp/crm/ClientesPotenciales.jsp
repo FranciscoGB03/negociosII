@@ -124,7 +124,8 @@
                         LinkedList<Clientes> lista =Consultas.ConsultClienteP();
                         for (int i=0;i<lista.size();i++)
                         {
-                           out.println("<tr>");                               
+                           out.println("<tr>");         
+                           out.println("<td>"+lista.get(i).getId()+"</td>");                      
                            out.println("<td>"+lista.get(i).getNombre()+"</td>");
                            out.println("<td>"+lista.get(i).getCorreo()+"</td>");
                            out.println("<td>"+lista.get(i).getCorreo2()+"</td>");
