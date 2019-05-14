@@ -40,11 +40,11 @@ public class BuscarClave extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         String cadena=request.getParameter("clavep");        
         Conexion c=new Conexion();        
-        HttpSession sesion=(HttpSession) request.getSession();
-        int usu=Integer.valueOf(sesion.getAttribute("usuario").toString());
+        //HttpSession sesion=(HttpSession) request.getSession();
+        //int usu=Integer.valueOf(sesion.getAttribute("usuario").toString());
         String campos="clave,periodo,fechaini,fechafin,estatus";
         ArrayList l=c.consultaVariosCamposUnaClave(cadena, campos,"calen_contable", 5);
-        int i = c.insercionRegistro(usu ,"contabilidad", "Consulta clave");
+        //int i = c.insercionRegistro(usu ,"contabilidad", "Consulta clave");
         
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */                  

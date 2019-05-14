@@ -37,32 +37,39 @@ public class AgregarProducto extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, ClassNotFoundException, SQLException {
         response.setContentType("text/html;charset=UTF-8");
+        //conexion
         Conexion c = new Conexion();
+        //declaracion de campos para obtener lo ingresado en el jsp
         String clave = request.getParameter("clave");
         String nombre = request.getParameter("nombre");
         String tipo = request.getParameter("tipo");
         String unidad = request.getParameter("unidad");
-        String cantidad = request.getParameter("cantidad");
         String costounitario = request.getParameter("costo");
-        String iva = request.getParameter("iva");
-        String fecha= request.getParameter("fecha");
         String costov=request.getParameter("costov");
+        String iva = request.getParameter("iva");
+        String cantidad = request.getParameter("cantidad");
+        //operacion de monto total
+        
         double vcosto=Double.parseDouble(costounitario);
         double viva=Double.parseDouble(iva);
         double monto=(vcosto*viva)+vcosto;
-         c.insertar("clave,nombre,tipo,unidad,cantidad,costounitario,iva,fecha,costo,monto_total,operacion", "producto",
-                    "'"+clave+"',"
-                       + "'"+nombre+"',"
-                       + "'"+tipo+"',"
-                       + "'"+unidad+"',"
-                       + cantidad+","
-                       + costounitario+","
-                       + iva+","
-                       + "'"+fecha+"',"
-                       +costov+","
-                       + monto+",'prueba'");
-         
-         response.sendRedirect("Inventario/InventarioProductoAgregar.jsp");
+        //Declaracion de campos de la base de datos
+        String campos="clave,nombre,tipo,unidad,costounitario,precio_venta,iva,cantidad,monto_total";
+        //declaracion de variable que guarda los valores obtenidos en el jsp
+        String valores="'"+clave+"',"
+                + "'"+nombre+"',"
+                + "'"+tipo+"',"
+                + "'"+unidad+"',"
+                + ""+costounitario+","
+                + ""+costov+","
+                + ""+iva+","
+                + ""+cantidad+","
+                + ""+monto
+                ;
+        
+        //insertar datos en la BD SAP
+        c.insertar(campos, "producto", valores);
+         response.sendRedirect("Inventario/InventarioProducto.jsp");
     }
 
     /**

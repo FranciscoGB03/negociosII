@@ -45,10 +45,10 @@ public class EliminarCuentaCliente extends HttpServlet {
         System.out.println("referencia:"+referencia);
         c.borrar("cuentacliente", referencia);
         
-        HttpSession sesion=(HttpSession) request.getSession();
+        /*HttpSession sesion=(HttpSession) request.getSession();
         int usu=Integer.valueOf(sesion.getAttribute("usuario").toString());
         int i = c.insercionRegistro(usu,  "contabilidad", "Elimino cuenta de cliente");
-        
+        */
        
         response.sendRedirect("Contabilidad/CuentasCliente.jsp");
     }

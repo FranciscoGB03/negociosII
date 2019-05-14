@@ -34,12 +34,11 @@
                     <hr>
                 </div>
             </div>
-             <div class="btn-group btn-group-justified">
-  <a href="/ERP/index.jsp" class="btn btn-primary">CRM</a>
-  <a href="/crm/index.jsp" class="btn btn-primary">ERP</a>
-  <a href="#" class="btn btn-primary">e-commerce</a>
-</div> 
-            
+            <center> 
+  <a href="login.jsp" class="btn btn-primary btn-lg btn-block">Enterprise Resources Planning</a>
+  <a href="crm/login.jsp" class="btn btn-primary btn-lg btn-block">Customer Relationship Management</a>
+                 </center>
+            </div>
         </form>
     </div>
     </body>

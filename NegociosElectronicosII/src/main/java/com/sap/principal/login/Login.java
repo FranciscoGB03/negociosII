@@ -1,7 +1,7 @@
 package com.sap.principal.login;
 
+
 import com.sap.conexion.Conexion;
-import com.sap.gerencia.clases.usuario;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
@@ -13,9 +13,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
-@WebServlet(urlPatterns = {"/Login"})
+@WebServlet(name = "Login",urlPatterns = {"/Login"})
 public class Login extends HttpServlet {
 
     /**
@@ -38,33 +37,28 @@ public class Login extends HttpServlet {
             System.out.println("usuario:"+usuario);
             System.out.println("pass:"+pass);
             Conexion c = new Conexion();
-            usuario usu = new usuario();
+            //usuario usu = new usuario();
             ArrayList lista = c.consulta("area,id", "empleado", "id = "+usuario+" and contrasena = '"+pass+"'",2);
-            usu.setId_emp(Integer.parseInt(usuario));
+            //usu.setId_emp(Integer.parseInt(usuario));
             if(!lista.isEmpty()){
-                Integer area = Integer.parseInt(lista.get(0).toString());
-                System.out.println("area:"+area);
-                HttpSession sesion= request.getSession(true);                
-                sesion.setAttribute("usuario",lista.get(1));
-                sesion.setAttribute("area",lista.get(0));
+                Integer area = Integer.parseInt(lista.get(0).toString());         
                 System.out.println("usuario:"+lista.get(1));
-                System.out.println("area:"+lista.get(0));
-                //c.insertar("descripcion", "log", "'Inicio de sesion para "+usuario+"'");
+                System.out.println("area:"+lista.get(0));                
                 switch(area){
                     case 1 :
-                        response.sendRedirect("Gerencia/InicioGerencia.jsp");
+                        response.sendRedirect("Contabilidad/Contabilidad.jsp");
                         break;
                     case 2 :
                         response.sendRedirect("RH/rh_index.jsp");
                         break;
                     case 3 :
-                        response.sendRedirect("Contabilidad/Contabilidad.jsp");
+                        response.sendRedirect("Gerencia/InicioGerencia.jsp");
                         break;
                     case 4 :
                         response.sendRedirect("Ventas/Ventas.jsp");
                         break;
                     case 5 :
-                        response.sendRedirect("Compras/Compras.jsp");
+                        response.sendRedirect("Inventario/Inventario.jsp");
                         break;
                     case 6 :
                         response.sendRedirect("Inventario/Inventario.jsp");
@@ -74,8 +68,10 @@ public class Login extends HttpServlet {
                         break;
                 }
             }else{
+                out.println("<script type=\"text/javascript\">");  
+                out.println("alert('El usuario o contraseña no son los correctos');");  
+                out.println("</script>");
                 c.insertar("descripcion", "log", "'Inicio de sesion fallido para "+usuario+"'");
-                response.sendRedirect("index.jsp");
             }
         }
     }
