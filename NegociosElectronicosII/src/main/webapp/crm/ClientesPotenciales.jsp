@@ -45,7 +45,13 @@
                             <a class="nav-link text-white" href="ClientesPotenciales.jsp">Clientes&nbsp;Potenciales</a>
                             <a class="nav-link text-white" href="CrearCliente.jsp">Agregar&nbsp;clientes</a>
                             <a class="nav-link text-white" href="ModificarCliente.jsp">Modificar&nbsp;clientes</a>                                  
-                        </div> 
+                        </div>
+                         </li>
+                          <li class="nav-item dropdown">
+                        <a href="#correo.jsp" class="nav-link dropdown-toggle text-white" id="producto" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Correo</a>
+                        <div class="dropdown-menu bg-primary" aria-labelledby="inventario">
+                            <a class="nav-link text-white" href="correo.jsp">Mandar Correo</a>                      
+                            </div> 
                                               
                 </ul>   
                <form class="form-inline my-2 my-lg-0" action="../crm/index.jsp">                
@@ -65,7 +71,8 @@
                             <tr>
                             <br/>
                                 <td><img src="../Recursos/img/img.png" style="width:50px;height:50px;" /></td>
-                            <td>
+                                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              
+                                <td>
                                     <a href="ClientesPotenciales.jsp" type="button" class="btn btn-primary">Clientes&nbsp;Potenciales</a>
                             </td>
                         </tr>

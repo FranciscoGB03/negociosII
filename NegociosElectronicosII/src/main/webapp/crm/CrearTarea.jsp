@@ -46,6 +46,12 @@
                             <a class="nav-link text-white" href="CrearCliente.jsp">Agregar&nbsp;clientes</a>
                             <a class="nav-link text-white" href="ModificarCliente.jsp">Modificar&nbsp;clientes</a>                                  
                         </div> 
+                         </li>
+                          <li class="nav-item dropdown">
+                        <a href="#correo.jsp" class="nav-link dropdown-toggle text-white" id="producto" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Correo</a>
+                        <div class="dropdown-menu bg-primary" aria-labelledby="inventario">
+                            <a class="nav-link text-white" href="correo.jsp">Mandar Correo</a>                      
+                            </div> 
                                               
                 </ul>   
                <form class="form-inline my-2 my-lg-0" action="../crm/index.jsp">                
