@@ -48,9 +48,9 @@ public class AgregarCuentaProveedor extends HttpServlet {
             String campos="clave,idcuentaempresa,idproveedor";            
             c.insertar(campos, "cuentaproveedor",valores);
             
-            HttpSession sesion=(HttpSession) request.getSession();
+            /*HttpSession sesion=(HttpSession) request.getSession();
             int usu=Integer.valueOf(sesion.getAttribute("usuario").toString());
-            int i = c.insercionRegistro(usu,  "contabilidad", "Agrego cuenta de proveedor");
+            int i = c.insercionRegistro(usu,  "contabilidad", "Agrego cuenta de proveedor");*/
             
             response.sendRedirect("Contabilidad/CuentasProveedor.jsp");        
     }

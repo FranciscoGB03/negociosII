@@ -20,7 +20,7 @@
         <!-- Include all compiled plugins (below), or include individual files as needed --> 
         <script src="../Recursos/Bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
         <script src="../Recursos/Bootstrap/include/popper.min.js" type="text/javascript"></script>
-      
+        <script src="../Recursos/js/Contabilidad.js" type="text/javascript"></script>
     </head>
 <body>
     <header class="sticky-top">
@@ -53,7 +53,7 @@
                             <a class="nav-link text-white" href="correo.jsp">Mandar Correo</a>                      
                             </div> 
                 </ul>   
-               <form class="form-inline my-2 my-lg-0" action="../crm/index.jsp">                
+               <form class="form-inline my-2 my-lg-0" action="../index.jsp">                
                     <button class="btn-outline-primary barra text-white my-2 my-sm-0" id="cerrarSesion" type="submit">Cerrar Sesi&oacute;n</button>
                 </form>
             </div>
@@ -133,7 +133,8 @@
                         LinkedList<Clientes> lista =Consultas.ConsultCliente();
                         for (int i=0;i<lista.size();i++)
                         {
-                           out.println("<tr>");                               
+                           out.println("<tr>");
+                           out.println("<td>"+lista.get(i).getId()+"</td>");
                            out.println("<td>"+lista.get(i).getNombre()+"</td>");
                            out.println("<td>"+lista.get(i).getCorreo()+"</td>");
                            out.println("<td>"+lista.get(i).getCorreo2()+"</td>");

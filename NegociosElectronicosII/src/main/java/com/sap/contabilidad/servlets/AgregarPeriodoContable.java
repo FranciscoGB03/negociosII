@@ -48,10 +48,10 @@ public class AgregarPeriodoContable extends HttpServlet {
         resultado=c.insertar("clave,periodo,fechaini,fechafin,estatus","calen_contable", campos);                            
         System.out.println("el resultado fue:"+resultado);
         
-        HttpSession sesion=(HttpSession) request.getSession();
+        /*HttpSession sesion=(HttpSession) request.getSession();
         int usu=Integer.valueOf(sesion.getAttribute("usuario").toString());
         int i = c.insercionRegistro(usu,  "contabilidad", "Agrego periodo contable");
-        
+        */
         if(resultado!=1){
             request.getSession().setAttribute("motivo", "Error de conexión, intentelo nuevamente!");
             response.sendRedirect("Contabilidad/Error.jsp");            

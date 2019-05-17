@@ -49,10 +49,10 @@ public class AgregarCuentaCliente extends HttpServlet {
         String campos="clave,idcuentaempresa,idcliente";            
         c.insertar(campos, "cuentacliente",valores);
         
-        HttpSession sesion=(HttpSession) request.getSession();
+        /*HttpSession sesion=(HttpSession) request.getSession();
         int usu=Integer.valueOf(sesion.getAttribute("usuario").toString());
         int i = c.insercionRegistro(usu,  "contabilidad", "Agrego cuenta de cliente");
-
+        */
         response.sendRedirect("Contabilidad/CuentasCliente.jsp");
         
     }

@@ -54,7 +54,7 @@
                             </div> 
                                               
                 </ul>   
-               <form class="form-inline my-2 my-lg-0" action="../crm/index.jsp">                
+               <form class="form-inline my-2 my-lg-0" action="../index.jsp">                
                     <button class="btn-outline-primary barra text-white my-2 my-sm-0" id="cerrarSesion" type="submit">Cerrar Sesi&oacute;n</button>
                 </form>
             </div>
@@ -128,10 +128,11 @@
       </tr>
       
       <%
-                        LinkedList<Clientes> lista =Consultas.ConsultCliente();
+                        LinkedList<Clientes> lista =Consultas.ConsultClienteP();
                         for (int i=0;i<lista.size();i++)
                         {
-                           out.println("<tr>");                               
+                           out.println("<tr>");         
+                           out.println("<td>"+lista.get(i).getId()+"</td>");                      
                            out.println("<td>"+lista.get(i).getNombre()+"</td>");
                            out.println("<td>"+lista.get(i).getCorreo()+"</td>");
                            out.println("<td>"+lista.get(i).getCorreo2()+"</td>");

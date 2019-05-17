@@ -37,7 +37,7 @@ public class CerrarSesion extends HttpServlet {
         sesion.removeAttribute("usuario");
         sesion.removeAttribute("area");                
         sesion.invalidate();
-        response.sendRedirect("index.jsp");
+        response.sendRedirect("../index.jsp");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

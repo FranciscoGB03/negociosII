@@ -41,13 +41,13 @@ public class BuscarClaveCliente extends HttpServlet {
         String cadena="id="+request.getParameter("clavep");  
         System.out.println("cadena:"+cadena);
         Conexion c=new Conexion();        
-        HttpSession sesion=(HttpSession) request.getSession();
-        int usu=Integer.valueOf(sesion.getAttribute("usuario").toString());
+        //HttpSession sesion=(HttpSession) request.getSession();
+        //int usu=Integer.valueOf(sesion.getAttribute("usuario").toString());
         String tabla="cuentacliente";
         String campos="id,clave,idcuentaempresa,idcliente";
         
         ArrayList l=c.consultaVariosCamposUnaClave2(cadena, campos,tabla, 4);
-        int i = c.insercionRegistro(usu ,"contabilidad", "Consulta clave cliente");
+        //int i = c.insercionRegistro(usu ,"contabilidad", "Consulta clave cliente");
         
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */                  

@@ -10,26 +10,44 @@ package com.sap.inventario.clases;
  * @author claudia
  */
 public class Producto {
+    String clave;
     String nombre;
-    double precio_compra;
-    double precio_venta;
+    double costounitario;
+    String unidad;
+    String tipo;
     int cantidad;
     double iva;
+    double costototal;
+    String fecha;
+    String operacion;
     double montototal;
-    int tipo;
+    int cantidaddoble;
+    String imagen;
 
-    public Producto(String nombre, double precio_compra, double precio_venta, int cantidad, double iva, double montototal, int tipo) {
-        this.nombre = nombre;
-        this.precio_compra = precio_compra;
-        this.precio_venta = precio_venta;
-        this.cantidad = cantidad;
-        this.iva = iva;
-        this.montototal = montototal;
-        this.tipo = tipo;
+    public String getImagen() {
+        return imagen;
     }
 
-   Producto() {
-       throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void setImagen(String imagen) 
+    {
+        this.imagen = imagen;
+    }
+    
+
+    public int getCantidaddoble() {
+        return cantidaddoble;
+    }
+
+    public void setCantidaddoble(int cantidaddoble) {
+        this.cantidaddoble = cantidaddoble;
+    }
+
+    public String getClave() {
+        return clave;
+    }
+
+    public void setClave(String clave) {
+        this.clave = clave;
     }
 
     public String getNombre() {
@@ -40,20 +58,28 @@ public class Producto {
         this.nombre = nombre;
     }
 
-    public double getPrecio_compra() {
-        return precio_compra;
+    public double getCostounitario() {
+        return costounitario;
     }
 
-    public void setPrecio_compra(double precio_compra) {
-        this.precio_compra = precio_compra;
+    public void setCostounitario(double costounitario) {
+        this.costounitario = costounitario;
     }
 
-    public double getPrecio_venta() {
-        return precio_venta;
+    public String getUnidad() {
+        return unidad;
     }
 
-    public void setPrecio_venta(Double precio_venta) {
-        this.precio_venta = precio_venta;
+    public void setUnidad(String unidad) {
+        this.unidad = unidad;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
     public int getCantidad() {
@@ -72,6 +98,30 @@ public class Producto {
         this.iva = iva;
     }
 
+    public double getCostototal() {
+        return costototal;
+    }
+
+    public void setCostototal(double costototal) {
+        this.costototal = costototal;
+    }
+
+    public String getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
+
+    public String getOperacion() {
+        return operacion;
+    }
+
+    public void setOperacion(String operacion) {
+        this.operacion = operacion;
+    }
+
     public double getMontototal() {
         return montototal;
     }
@@ -79,13 +129,5 @@ public class Producto {
     public void setMontototal(double montototal) {
         this.montototal = montototal;
     }
-
-    public int getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(int tipo) {
-        this.tipo = tipo;
-    }
-
+    
 }

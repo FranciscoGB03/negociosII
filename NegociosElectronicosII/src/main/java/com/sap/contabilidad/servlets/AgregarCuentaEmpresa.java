@@ -57,10 +57,10 @@ public class AgregarCuentaEmpresa extends HttpServlet {
         System.out.println("valores:"+valores);
         c.insertar(campos,"cuentaempresa", valores);
         
-        HttpSession sesion=(HttpSession) request.getSession();
+/*        HttpSession sesion=(HttpSession) request.getSession();
         int usu=Integer.valueOf(sesion.getAttribute("usuario").toString());
         int i = c.insercionRegistro(usu,  "contabilidad", "Agrego cuenta de empresa");
-        
+  */      
         response.sendRedirect("Contabilidad/CuentasEmpresa.jsp");
     }
 

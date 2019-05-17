@@ -471,11 +471,7 @@ function editProd(){
      return false
     }
     
-}
-
-
-
-function listCompra(){
+}function listCompra(){
    
    if(!document.getElementById('op1').checked && !document.getElementById('op2').checked && !document.getElementById('op3').checked && !document.getElementById('op4').checked){
 alert('Debes seleccionar una opcion');
