@@ -23,7 +23,8 @@
         <title>Crear Tarea</title>
     </head>
     <body onload="regreso();">
-        <header class="sticky-top">
+        
+    <header class="sticky-top">
         <nav class="navbar navbar-expand-lg navbar-light bg-primary">
             <a href="inicio.jsp" class="navbar-brand text-white">CRM</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#inv_navbar" aria-controls="inv_navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,7 +33,7 @@
             
             <div class="collapse navbar-collapse" id="int_navbar">
                 <ul class="navbar-nav mr-auto">
-                   <li class="nav-item dropdown">
+                    <li class="nav-item dropdown">
                         <a href="#tarea.jsp" class="nav-link dropdown-toggle text-white" id="producto" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tareas</a>
                         <div class="dropdown-menu bg-primary" aria-labelledby="inventario">
                             <a class="nav-link text-white" href="CrearTarea.jsp">Crear Tarea</a>
@@ -45,21 +46,28 @@
                             <a class="nav-link text-white" href="ClientesPotenciales.jsp">Clientes&nbsp;Potenciales</a>
                             <a class="nav-link text-white" href="CrearCliente.jsp">Agregar&nbsp;clientes</a>
                             <a class="nav-link text-white" href="ModificarCliente.jsp">Modificar&nbsp;clientes</a>                                  
-                        </div> 
+                        </div>
+                         </li>
+                         <li class="nav-item dropdown">
+                        <a href="#ofertas.jsp" class="nav-link dropdown-toggle text-white" id="ofertas" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ofertas</a>
+                        <div class="dropdown-menu bg-primary" aria-labelledby="crm">
+                            <a class="nav-link text-white" href="CrearOferta.jsp">Crear&nbsp;ofertas</a>
+                            <a class="nav-link text-white" href="ofertas.jsp">Ofertas</a>
+                     </div>
                          </li>
                           <li class="nav-item dropdown">
                         <a href="#correo.jsp" class="nav-link dropdown-toggle text-white" id="producto" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Correo</a>
                         <div class="dropdown-menu bg-primary" aria-labelledby="inventario">
                             <a class="nav-link text-white" href="correo.jsp">Mandar Correo</a>                      
                             </div> 
-                                              
+                          </li>                
                 </ul>   
                <form class="form-inline my-2 my-lg-0" action="../index.jsp">                
                     <button class="btn-outline-primary barra text-white my-2 my-sm-0" id="cerrarSesion" type="submit">Cerrar Sesi&oacute;n</button>
                 </form>
             </div>
         </nav>
-    </header>  
+    </header>
         <br><br>
             <!-- FIN DE NAVBAR -->
             <div class="row"><!-- INICIO DE SECCION PRINCIPAL -->

@@ -37,6 +37,7 @@
             <center> 
   <a href="login.jsp" class="btn btn-primary btn-lg btn-block">Enterprise Resources Planning</a>
   <a href="crm/login.jsp" class="btn btn-primary btn-lg btn-block">Customer Relationship Management</a>
+  <a href="CRMv1/E-commerce/Index.jsp" class="btn btn-primary btn-lg btn-block">E-commerce</a>
                  </center>
             </div>
         </form>
