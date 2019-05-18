@@ -97,44 +97,72 @@
                     <div class="container">
                         <form role="form" action="../ModificarClient" method="post">                
                             <div class="form-group">
-                                <label for="id">Id</label>                            
-                                <input id="clavep" name="clavep" class="form-control" type="text" required="required"/>
-                            </div>
-                            <div class="form-group">
-                                <input type="submit" value="buscar" class="btn btn-default"/>
-                            </div>	                                                            
-                        </form>                        
-                        <br>
-                        <form role="form" action="../ActualizarPeriodo" method="post">                            
-                            <div class="form-group">
-                                <label for="fechaini">Id:</label>                                                                
+                                
+                                              <label for="fechaini">Clave a Modificar:</label>                                                                
                                 <%out.println("<input id='claveperiodo' name='claveperiodo' class='form-control' type='text' value="+request.getSession().getAttribute("clave")+">");%>
                             </div>
+                            <!------------------------------------------------------->
+                            
                             <div class="form-group">
-                                <label for="ejercicio">A&ntilde;o:</label>                               
-                                <select id="ejercicio" name="ejercicio" class="form-control">
-                                    <%out.println("<option value="+request.getSession().getAttribute("periodo")+">"+request.getSession().getAttribute("periodo")+"</option>");%>
-                                    <option value="2018">2018</option>
-                                    <option value="2017">2017</option>                                        
-                                </select>                                
-                            </div>         
+           <label for="nombre">Nombre:</label>
+           <%out.println("<input id='nombre' name='nombre' class='form-control' type='text' value="+request.getSession().getAttribute("nombre")+">");%>          
+                  </div>
+                <div class="form-group">
+                    <label for="appat">Apellido Paterno:</label>
+    <%out.println("<input id='appat' name='appat' class='form-control' type='text' value="+request.getSession().getAttribute("appat")+">");%>          
+            </div>
+                <div class="form-group">
+                   <label for="apmat">Apellido Materno:</label>
+    <%out.println("<input id='apmat' name='apmat' class='form-control' type='text' value="+request.getSession().getAttribute("apmat")+">");%>                               
+               </div>
+                 <div class="form-group">
+                    <label for="correo">Correo:</label>
+   <%out.println("<input id='correo' name='correo' class='form-control' type='text' value="+request.getSession().getAttribute("correo")+">");%>                               
+                </div>
+                <div class="form-group">
+                    <label for="estadoClientes">Estado:</label>
+    <%out.println("<input id='estadoClientes' name='estadoClientes' class='form-control' type='text' value="+request.getSession().getAttribute("estadoClientes")+">");%>                                                   
+                </div>
+                 <div class="form-group">
+                    <label for="municipio">Municipio:</label>
+    <%out.println("<input id='municipio' name='municipio' class='form-control' type='text' value="+request.getSession().getAttribute("municipio")+">");%>                                                   
+                </div> 
+                <div class="form-group">
+                    <label for="direccion">Dirección:</label>
+    <%out.println("<input id='direccion' name='direccion' class='form-control' type='text' value="+request.getSession().getAttribute("direccion")+">");%>                                                                                 
+                </div>
                             <div class="form-group">
-                                <label for="fechaini">Fecha de inicio:</label>                                                                
-                                <%out.println("<input id='fechaini' name='fechaini' class='form-control' type='date' value="+request.getSession().getAttribute("fechaini")+">");%>
-                            </div>
-                            <div class="form-group">
-                                <label for="fechafin">Fecha final:</label>                                
-                                <%out.println("<input id='fechafin' name='fechafin' class='form-control' type='date' value="+request.getSession().getAttribute("fechafin")+">");%>
-                            </div>
-                            <div class="form-group">
-                                <label for="estado">Estado:</label>                                
-                                <select id="estado" name="estado" class="form-control">
-                                    <%out.println("<option value="+request.getSession().getAttribute("estatus")+">"+request.getSession().getAttribute("estatus")+"</option>");%>
-                                    <option value="abierto">Abierto</option>
-                                    <option value="bloqueado">Bloqueado</option>
-                                    <option value="cerrado">Cerrado</option>
-                                </select>                                                                    
-                            </div>
+                    <label for="tel">Telefono:</label>
+    <%out.println("<input id='tel' name='tel' class='form-control' type='number' value="+request.getSession().getAttribute("tel")+">");%>                                                                                 
+                 </div>
+                <div class="form-group">
+                    <label for="rfcClientes">RFC:</label>
+   <%out.println("<input id='rfcClientes' name='rfcClientes' class='form-control' type='number' value="+request.getSession().getAttribute("rfcClientes")+">");%>                                                                                 
+ </div>
+                <div class="form-group">
+                    <label for="cuentabancariaClientes">Tarjeta:</label>
+    <%out.println("<input id='cuentabancariaClientes' name='cuentabancariaClientes' class='form-control' type='number' value="+request.getSession().getAttribute("cuentabancariaClientes")+">");%>                                                                                 
+</div>
+
+    <div class="form-group">
+
+                    <label for="estatus">Estatus</label>
+                                 <select id="estatus" name="estatus" class="form-control">
+    <%out.println("<option value="+request.getSession().getAttribute("estatus")+">"+request.getSession().getAttribute("estatus")+"</option>");%>                    
+                                    <option value="x">Seleccione...</option>
+                                    <option value="1">Potencial</option>
+                                    <option value="2">Actual</option>
+                                    <option value="3">Inactivo</option>
+                                </select>
+                </div>
+                     <div class="form-group">
+                    <label for="code">Codigo postal:</label>  
+    <%out.println("<input id='code' name='code' class='form-control' type='text' value="+request.getSession().getAttribute("code")+">");%>                                                                                 
+                  </div>
+                     <div class="form-group">
+                    <label for="razon">Razon social:</label>
+    <%out.println("<input id='razon' name='razon' class='form-control' type='text' value="+request.getSession().getAttribute("razon")+">");%>                                                                                 
+                 </div>    
                             <div class="form-group">
                                 <input type="reset" value="Cancelar" class="btn btn-default"/>                                
                                 <input type="submit" value="Guardar" class="btn btn-default"/>                                

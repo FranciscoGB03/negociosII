@@ -18,6 +18,30 @@ import java.util.Properties;
  * @author claudia
  */
 public class Consultas {
+    
+    
+    
+    public static LinkedList Ofertas() throws SQLException, ClassNotFoundException {        
+        Connection conn;
+        Class.forName("org.postgresql.Driver");
+       LinkedList <Clientes> l=new LinkedList<>();
+        Properties connProp = new Properties();
+        connProp.put("user", "postgres");
+        connProp.put("password", "root");
+        conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/dbabarrotes", connProp);
+        Statement stmt;        
+        stmt = conn.createStatement();
+        ResultSet rs = stmt.executeQuery("SELECT nombre,descripcion FROM ofertas");
+            while (rs.next()) {
+                Clientes p=new Clientes();           
+                p.setEstatus(rs.getString("nombre"));
+                p.setEstatus(rs.getString("descripcion"));
+                l.add(p);
+            }                    
+        conn.close();
+        return l;
+}
+    
      public static LinkedList opcionesCliente() throws SQLException, ClassNotFoundException {        
         Connection conn;
         Class.forName("org.postgresql.Driver");
